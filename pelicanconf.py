@@ -22,7 +22,7 @@ SUMMARY_MAX_LENGTH = 30
 # Feed Generation
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 FEED_ALL_RSS = 'fees/all.rss.xml'
-FEED_DOMAIN = 'http://lorenamesa.com'
+FEED_DOMAIN = 'http://lorenamesa.com'  #'http://localhost:8000' 
 
 # Page Settings
 PAGE_SAVE_AS = '{slug}.html'
@@ -60,7 +60,7 @@ ARTIST_URL = 'https://www.instagram.com/agpesty/?hl=en'
 
 # Sitemap
 SITEMAP_SAVE_AS = 'sitemap.xml'
-DIRECT_TEMPLATES = ['sitemap']
+DIRECT_TEMPLATES = ['sitemap', 'index']
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
