@@ -9,7 +9,7 @@ CURRENT_DIR_PATH = Path(__file__).resolve().parents[1]
 # Site Settings
 AUTHOR = 'Lorena Mesa'
 SITENAME = 'Lorena Mesa'
-SITEURL = 'http://localhost:8000' #'http://lorenamesa.com'
+SITEURL = 'http://lorenamesa.com'
 THEME = '{}/voce'.format(CURRENT_DIR_PATH)
 PATH = 'content'
 
