@@ -1,0 +1,6 @@
+[submodule "voce"]
+	path = voce
+	url = https://github.com/lorenanicole/voce.git
+[submodule "output"]
+	path = output
+	url = https://github.com/lorenanicole/lorenanicole.github.io.git
