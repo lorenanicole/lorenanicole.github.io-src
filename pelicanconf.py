@@ -22,7 +22,7 @@ SUMMARY_MAX_LENGTH = 30
 # Feed Generation
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 FEED_ALL_RSS = 'fees/all.rss.xml'
-FEED_DOMAIN = 'localhost:8000'
+FEED_DOMAIN = 'http://lorenamesa.com'
 
 # Page Settings
 PAGE_SAVE_AS = '{slug}.html'
