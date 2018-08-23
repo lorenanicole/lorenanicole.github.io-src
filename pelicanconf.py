@@ -9,7 +9,7 @@ CURRENT_DIR_PATH = Path(__file__).resolve().parents[1]
 # Site Settings
 AUTHOR = 'Lorena Mesa'
 SITENAME = 'Lorena Mesa'
-SITEURL = 'http://lorenamesa.com'
+SITEURL = 'http://lorenamesa.com' #'http://localhost:8000' 
 THEME = '{}/voce'.format(CURRENT_DIR_PATH)
 PATH = 'content'
 
@@ -20,11 +20,9 @@ DEFAULT_PAGINATION = 6
 SUMMARY_MAX_LENGTH = 30
 
 # Feed Generation
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
-TRANSLATION_FEED_ATOM = None
-AUTHOR_FEED_ATOM = None
-AUTHOR_FEED_RSS = None
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
+FEED_ALL_RSS = 'fees/all.rss.xml'
+FEED_DOMAIN = 'localhost:8000'
 
 # Page Settings
 PAGE_SAVE_AS = '{slug}.html'
@@ -59,5 +57,10 @@ MANGLE_EMAILS = True
 FUZZY_DATES = True
 CURRENT_YEAR = datetime.now().year
 ARTIST_URL = 'https://www.instagram.com/agpesty/?hl=en'
+
+# Sitemap
+SITEMAP_SAVE_AS = 'sitemap.xml'
+DIRECT_TEMPLATES = ['sitemap']
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
