@@ -3,7 +3,7 @@ Title: Speaker Info
 Summary: Speaker Information 
 Slug: speaker-info
 
-# I am passionate about speaking because I believe that each of us can leave more than we take. As a public speak I aim to raise awareness, motivate, and ultimately introduce you to something new.
+# I am passionate about speaking because I believe that each of us can leave more than we take. As a public speaker I aim to raise awareness, motivate, and ultimately introduce you to something new.
 
 ###_Who I am as a speaker._
 

@@ -4,12 +4,12 @@ from __future__ import unicode_literals
 from datetime import datetime 
 from pathlib import Path
 
-CURRENT_DIR_PATH = Path(__file__).resolve().parents[1]
+CURRENT_DIR_PATH = Path(__file__).resolve().parent
 
 # Site Settings
 AUTHOR = 'Lorena Mesa'
 SITENAME = 'Lorena Mesa'
-SITEURL = 'http://lorenamesa.com' #'http://localhost:8000' 
+SITEURL = 'http://lorenamesa.com' # 'http://localhost:8000'  
 THEME = '{}/voce'.format(CURRENT_DIR_PATH)
 PATH = 'content'
 
@@ -33,8 +33,8 @@ ARCHIVES_URL = 'archive.html'
 LINKS = (('Home', '/index.html'),
          ('About', '/about.html'),
          ('Speaker Info', '/speaker-info.html'),
-         ('Values', '/values.html'),
-         ('Etc', '/etc.html'))
+     	 ('Talks', '/talks.html'),
+         ('Values', '/values.html'))
 
 # Social Accounts
 SOCIAL = (('Email', 'mailto:me@lorenamesa.com'),
