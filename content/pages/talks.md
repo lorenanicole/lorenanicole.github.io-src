@@ -30,6 +30,7 @@ Slug: talks
 * [I Code. Hire Me.: Lorena Mesa](https://anchor.fm/i-code-hire-me/episodes/004---How-to-Gain-Coding-Skills-Through-Immersion-Programs-w-Lorena-Mesa-e1sgjv) July 2018
 * [Open Source Craft: Lorena Mesa](http://codepop.com/open-sourcecraft/episodes/lorena-mesa/) March 2017
 * [Greater Than Code: Lorena Mesa](http://www.greaterthancode.com/podcast/episode-023-lorena-mesa/) March 2017
+* [Podcast.__Init__: Lorena Mesa](https://www.podcastinit.com/episode-78-lorena-mesa/) October 2016
 * Talk Python to Me Jan 2016 - [Episode #41: Getting your first dev job as a Python developer (Part 2)](https://talkpython.fm/episodes/show/41/getting-your-first-dev-job-as-a-python-developer-part-2)
 
 <h3 id=writing>Writing and Editing</h3>
