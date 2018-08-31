@@ -36,6 +36,7 @@ Slug: talks
 <h3 id=writing>Writing and Editing</h3>
 
 ####Writing
+* [Modeling Aggression in Online Communities](http://gdsc.georgetown.domains/capstone-projects/capstone-projects-fall-2017/modeling-aggression-in-online-communities/) - Georgetown University Data Science Certificate Capstone Project December 2017
 * [Microsoft International Women's History Month - A Letter to Lorena Mesa (From Lorena Mesa)](https://blogs.microsoft.com/chicago/2017/03/30/a-letter-to-lorena-mesa-from-lorena-mesa/?utm_content=buffer3ba1c&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer) March 2017
 * [Sprout Social's Insights Engineering Blog - So you want to code?](https://sproutsocial.com/insights/learn-how-to-code/) Feb 2016
 
