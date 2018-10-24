@@ -6,7 +6,7 @@ Slug: talks
 <h3 id=conferences>Conference Talks</h3>
 
 
-* PyCon Spain Key Note December 2018 - [Now is better than Never: What the Zen of Python can teach us about Data Ethics](https://pycon.se)
+* PyCon Sweden Key Note December 2018 - [Now is better than Never: What the Zen of Python can teach us about Data Ethics](https://pycon.se)
 * PythonDay Mexico December 2018 - [Now is better than Never: What the Zen of Python can teach us about Data Ethics](https://http://pythonday.mx)
 * Northbay Python November 2018 - [¡Escuincla babosa!: Creating a telenovela script with a neural network](https://2018.northbaypython.org/schedule/presentation/25/)
 * PyCon España Key Note October 2018 - [Now is better than Never: What the Zen of Python can teach us about Data Ethics](https://2018.es.pycon.org/speakers/lorena-mesa)
