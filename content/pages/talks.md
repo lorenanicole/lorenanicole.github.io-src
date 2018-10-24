@@ -5,7 +5,13 @@ Slug: talks
 
 <h3 id=conferences>Conference Talks</h3>
 
-* PyOhio Key Note Feburary 2018 - [Now is better than Never: What the Zen of Python can teach us about Data Ethics](https://www.youtube.com/watch?v=8mHMWQCCEdY)
+
+* PyCon Spain Key Note December 2018 - [Now is better than Never: What the Zen of Python can teach us about Data Ethics](https://pycon.se)
+* PythonDay Mexico December 2018 - [Now is better than Never: What the Zen of Python can teach us about Data Ethics](https://http://pythonday.mx)
+* Northbay Python November 2018 - [¡Escuincla babosa!: Creating a telenovela script with a neural network](https://2018.northbaypython.org/schedule/presentation/25/)
+* PyCon España Key Note October 2018 - [Now is better than Never: What the Zen of Python can teach us about Data Ethics](https://2018.es.pycon.org/speakers/lorena-mesa)
+* PyCon España Key Note October 2018 - [Now is better than Never: What the Zen of Python can teach us about Data Ethics](https://2018.es.pycon.org/speakers/lorena-mesa)
+* PyOhio Key Note July 2018 - [Now is better than Never: What the Zen of Python can teach us about Data Ethics](https://www.youtube.com/watch?v=8mHMWQCCEdY)
 * PyCon Colombia Key Note Feburary 2018 - [Your model is bias, but so is your data: The case for ethics in data science](https://2018.pycon.co/es/ponentes/lorena-mesa/)
 * DjangoCon USA August 2017 - [Using Django, Docker, and Scikit-learn to Bootstrap Your Machine Learning Project](https://pyvideo.org/djangocon-us-2017/using-django-docker-and-scikit-learn-to-bootstrap-your-machine-learning-project.html)
 * ACT-W Chicago October 2017 - [What is Cyberbullying? A Natural Language Approach to Detecting Cyberbullying](https://drive.google.com/file/d/0Bwky88uBblT2bmJiZG1Panl2MjA/view) 
