@@ -43,7 +43,7 @@ As per the topics I'm interested in, well these vary, but some I'm currently int
 
 ###_Where am I speaking next and what's my availability._ 
 
-My next confirmed speaking commitment is as a keynote at [PyCon Spain](https://2018.es.pycon.org/) in October 2018. Conferences more than 100 miles away from Chicago, Illinois I'm open to speaking at starting January 2019.
+My next confirmed speaking commitment is as a keynote at [PyCon Sweden](http://pycon.se) in December 2018. Conferences more than 100 miles away from Chicago, Illinois I'm open to speaking at starting March 2019.
 
 I am available to speak in English, y sí español también. Hablo español, pero por favor dime si quieres una charla en español. Todavía necesito practicar.
 
