@@ -12,7 +12,7 @@ git clone --recursive repo-url  # downloads the submodules
 
 - Master (this) repo
 - `/output` dir points to [my GitHub pages repo](https://github.com/lorenanicole/lorenannicole.github.io) where Pelican builds and stores generated static files.
-- '/voce' dir points to [fork of the Pelican theme voce](https://github.com/lorenanicole/voce) used in my website
+- `/voce` dir points to [fork of the Pelican theme voce](https://github.com/lorenanicole/voce) used in my website
 
 To find more Pelican themes explore [here](http://www.pelicanthemes.com/).
 
