@@ -1,4 +1,4 @@
-Title: Akwaaba! A Pan Regional African Python Conference and The Year of Return 
+Title: Akwaaba! A Pan-African Python Conference and The Year of Return 
 Date: 2019-08-14
 tags: Python, Africa, technology, AI, ML, travel
 
@@ -10,7 +10,7 @@ Speaking with colleagues, many were surprised, some not so much. Those not surpr
 
 Acquiring the two visas, one which required me to travel to New York City to submit my biometrics for a tourist visa, in hindsight was a perfect prelude to my travel to West Africa. The privilege of not needing to consider what paperwork was needed prior to entry is a rare one and one I have been accustomed to. Time and time again I would be reminded of my privilege and how that informs the way I navigate the world.
 
-### A Pan Regional African Python Conference: PyCon Africa
+### A Pan-African Python Conference: PyCon Africa
 
 First, thanks where thanks are due. If it weren't for [Marlene Mhangami](https://twitter.com/marlene_zw), a fellow Director of the Python Software Foundation, who also served as Chair for the inaugural [PyCon Africa](https://africa.pycon.org/) I would not have attended PyCon Africa. It was Marlene who informed me, "you know, Accra and Lagos are about an hour flight apart" as my initials plans only included Lagos for a friend’s birthday celebration. (Please watch this 23 questions with Marlene video below, it's amazing!)
 
