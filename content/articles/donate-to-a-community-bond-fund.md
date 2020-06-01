@@ -18,12 +18,11 @@ There's so many emotions I know we have:
 
 I cannot, as a light skinned person of Latinx heritage, justify sitting by on the sidelines while there are those that tell us *we should not care*, that *we should do nothing*.
 
-If you are not ANGRY at the  murder of George Floyd, at the countless black lives lost before, and what is likely to be the continued callous murders of our black brothers and sisters. I do not know what to say to you. 
+If you are not **ANGRY** at the *murder* of George Floyd, at the countless black lives lost before, and what is likely to be the continued callous murders of our black brothers and sisters. I do not know what to say to you. 
 
-If you are not ANGRY at your brown brother and sisters, mainly from Latin America, locked in cages and treated inhumanly. I do not know what to say to you.
+If you are not **ANGRY** at your brown brother and sisters, many from Latin America, locked in cages and treated inhumanly. I do not know what to say to you.
 
-
-If you are not ANGRY at billionaires getting richer while millions of USA people lose their jobs and income. I do not know what to say to you.
+If you are not **ANGRY** at billionaires getting richer while millions of USA people lose their jobs and income. I do not know what to say to you.
 
 Step up, be present, be critical. Most importantly, to my white people, listen. Listen, do something, **DO BETTER, BE BETTER**. 
 
