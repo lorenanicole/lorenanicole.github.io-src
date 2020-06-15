@@ -64,6 +64,6 @@ soliciting feedback on.
     <img src="theme/images/reading-list.JPG" style="max-width: 100%, height:auto, width:auto">
 </div>
 
-If you have a suggestion that should be added to <a href="(https://www.goodreads.com/list/show/149408.Bias_Equity_in_Tech)">the list</a> you can add 👉 <a href="recommendations.md">here</a>.
+If you have a suggestion that should be added to the list you can add 👉 <a href="biasin.tech">here</a>.
 
 We all have to do the work. To show up. To listen. To learn. To stay engaged. Will you join me?
