@@ -4,14 +4,18 @@ Summary: Talks
 Slug: talks
 
 <h3 id=conferences>Conference Talks</h3>
-* [Opening Remarks: Loyola University Center for Digital Ethics and Policy Digital Ethics Award](https://www.digitalethics.org/events/center-digital-ethics-and-policy-launches-annual-award-digital-ethics) November 2019
-* [Python Brasil Keynote October 2019](https://2019.pythonbrasil.org.br)
-* PyCon LayAm Keynote September 2019 - [A line of Python is written and then ...? Exploring the fortuitous impact of el efecto mariposa de Python.](https://www.pylatam.org/ponentes-principales/#lorena)
-* Strange Loop September 2019 - [¡Escuincla babosa! A Python Deep Learning Telenovela](https://www.thestrangeloop.com/2019/escuincla-babosa-a-python-deep-learning-telenovela.html)
-* PyCon USA May 2019 - [¡Escuincla babosa!: Creating a telenovela script with a neural network](https://www.youtube.com/watch?v=VWDoQPm5Ozw)
-* ChiHackNight March 2019 - [Using Data Ethically](https://www.youtube.com/watch?v=h2Z09gOOOJg)
+* Python Web Conf Keynote June 2020: [Why I talk about ethics when I talk about technology](https://2020.pythonwebconf.com/speakers/lorena-mesa)
+* Chicago Python User Group Data Special Interest Group June 2020: [¡Escuincla babosa! A Python Deep Learning Telenovela](https://www.youtube.com/watch?v=tD4T1bQWOM8) 
 <details> 
-<summary> Expand for talks prior to 2019 </summary>
+<summary> Click here to expand for talks prior to 2020 👇🏽 </summary>
+
+	### 2019
+	* [Opening Remarks: Loyola University Center for Digital Ethics and Policy Digital Ethics Award](https://www.digitalethics.org/events/center-digital-ethics-and-policy-launches-annual-award-digital-ethics) November 2019
+	* [Python Brasil Keynot e October 2019](https://2019.pythonbrasil.org.br)
+	* PyCon LayAm Keynote September 2019 - [A line of Python is written and then ...? Exploring the fortuitous impact of el efecto mariposa de Python.](https://www.pylatam.org/ponentes-principales/#lorena)
+	* Strange Loop September 2019 - [¡Escuincla babosa! A Python Deep Learning Telenovela](https://www.thestrangeloop.com/2019/escuincla-babosa-a-python-deep-learning-telenovela.html)
+	* PyCon USA May 2019 - [¡Escuincla babosa!: Creating a telenovela script with a neural network](https://www.youtube.com/watch?v=VWDoQPm5Ozw)
+	* ChiHackNight March 2019 - [Using Data Ethically](https://www.youtube.com/watch?v=h2Z09gOOOJg)
 
 	### 2018 
 	* PyCon Sweden Keynote December 2018 - [Now is better than Never: What the Zen of Python can teach us about Data Ethics](https://pycon.se)

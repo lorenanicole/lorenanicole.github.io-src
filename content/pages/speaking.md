@@ -43,7 +43,7 @@ As per the topics I'm interested in, well these vary, but some I'm currently int
 
 ###_Where am I speaking next and what's my availability._ 
 
-My next confirmed speaking commitment is for a closing keynote at [PyCon LatAm](https://www.pylatam.org/) in August 2019. Conferences or functions more than 100 miles away from Chicago, Illinois I'm open to speaking at starting December 2019.
+I'm accepting *virtual only* speaking opportunities through the end of 2020. That said, let's try something creative! What are you thinking?
 
 ### Hablamos español Lorena, puedes crear contenido para nuestra comunidad?
 
