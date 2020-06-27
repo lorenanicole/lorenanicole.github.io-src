@@ -7,7 +7,7 @@ Slug: values
 
 This isn't meant as an empty promise towards diversity, inclusion, and belonging. Rather by stating plainly and unapologetically my values I can provide a platform for myself, and ideally others, to consider how they can participate as ethically minded, inclusive technologists in today's world. 
 
-1. First and foremost, I value a diverse yet inclusive technology community. Perhaps as it was best stated to me as: _diversity is being invited to the party, inclusion is being asked to dance_.
+1. First and foremost, I value anti-racist community. While I learn how to occupy an anti-racist mindset and do the work necessary to be anti-racist I invite you to join me. Let's talk, or better yet, I can listen. Find my contact information [here](/about.html#contact). In doing the work to be anti-racist I deeply value, in technology specifically, a diverse yet inclusive community. What does this mean? As it was once stated to me: _diversity is being invited to the party, inclusion is being asked to dance_. 
 
 2. I uphold the [Global Data Ethics Pledge](https://github.com/Data4Democracy/ethics-resources#global-data-ethics-pledge-gdep). By extension, I am unconditionally an advocate for and practicioneer of data ethics.
 
@@ -25,7 +25,7 @@ If so, great! If not, we all have different values and motivational drivers. Dis
 
 ### Value driven tech
 
-My values inspire the type of tech I build and the communities I participate in. Projects and communities that I'm actively supporting and/or participating include:
+My values inspire the type of tech I build and the communities I participate in. Projects, speakers, and communities that I'm actively supporting and/or participating include:
 
 - _Data ethics and transparency in data science and machine learning_: [Global Data Ethics Pledge](https://github.com/Data4Democracy/ethics-resources#global-data-ethics-pledge-gdep)
 
@@ -33,7 +33,9 @@ My values inspire the type of tech I build and the communities I participate in.
 
 - _Immigration reform_: [Mijente](https://mijente.net/)
 
-- _Data for Black Lives_: [Data for Black Lives](http://d4bl.org/) is one way to support the platform originated by #BlackLivesMatter.
+- _Data for Black Lives_: [Data for Black Lives](http://d4bl.org/) is one way to support the platform originated by [#BlackLivesMatter](https://blacklivesmatter.com/).
+
+- _Kim Crayton and #causeascene_: Kim's provided the "[Being an Antiracist at Home](https://ti.to/kim.crayton.llc/being-an-antiracist-at-home)"
 
 - _Open Source_: Specically in Python through the [Python Software Foundation](https://python.org/psf) as a contributing member and member of various PSF workgroups by building a globally diverse, inclusive Python community and supporting Python open source software.
 
@@ -42,10 +44,3 @@ My values inspire the type of tech I build and the communities I participate in.
 ### Want to build value driven tech together?
 
 Awesome! Contact information can be found on the [about](/about.html) page.
-
-
-
-
-
-
-
