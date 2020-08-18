@@ -37,9 +37,11 @@ One way we can move forward towards Election 2020 is to prepare, plan, and be re
 
 Details [vary state to state](https://www.nbcnews.com/specials/plan-your-vote-state-by-state-guide-voting-by-mail-early-in-person-voting-election/) and states are scrambling to clarify what date a mail in ballot [can be accepted](https://www.npr.org/2020/07/13/889751095/signed-sealed-undelivered-thousands-of-mail-in-ballots-rejected-for-tardiness). 
 
+<img src="/theme/images/vote-by-state.png" alt="Plan your vote"/>
+
 So, how are you planning to vote? 
 
-Enter in our need to [prepare a voting plan](https://www.ncjw.org/wp-content/uploads/2018/09/Create-a-Voting-Plan.pdf).
+If you don't have an answer, don't worry. That's why we are going to [prepare a voting plan](https://www.ncjw.org/wp-content/uploads/2018/09/Create-a-Voting-Plan.pdf).
 
 In 2016, of the more than 120 million votes cast only [some 107,000 votes in three states effectively decided the election](https://www.washingtonpost.com/graphics/politics/2016-election/swing-state-margins/). This math is beyond problematic. Why we continue to have an electoral college which disproportionately gives states with less population more voting power (cough: Senate) [is an oddity in the simplest of terms](https://www.sceneonradio.org/episode-31-turning-the-lens-seeing-white-part-1/). In order to take on strucutral inequities, we need to take action to install a competent Executive body that believes, in no particular order: the value of *all* but particularly those whom have suffered harm so unjustly for so long, science, truth, decency, and above all *in us*. 
 
@@ -73,7 +75,7 @@ Go and ask five folks in your network. That's your homework. Do it. If not for m
 
 [She deserves better](https://www.vox.com/2020/8/18/21373174/michelle-obama-dnc-speech-trump). I do. And yes, so do you.
 
-## Oh yah ...
+## Need more news?
 
 I started a crowdsourced daily digest over at [What To Do Today Election 2020](http://wtdtodayelection2020.us/) with daily news, events, call to action, and whatever else we need. Subscribe! Read it! Suggest content! 
 
