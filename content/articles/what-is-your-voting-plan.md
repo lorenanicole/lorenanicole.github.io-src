@@ -1,6 +1,6 @@
 Title: What is your voting plan? Or, how my plan is to follow Michelle Obama into hell
 slug:  what-is-your-voting-plan
-Date: 2020-08-17
+Date: 2020-08-18
 tags: Voting, Election-2020
 
 This week marks the 100th year anniversary of the 19th Amendment in the United States of America.
@@ -11,7 +11,7 @@ For *only* 100 years, women (and to be clear not *all* women, because, history, 
 
 >> The right of citizens of the United States to vote shall not be denied or abridged by the United States or by any State on account of sex. Congress shall have power to enforce this article by appropriate legislation.
 
-Only fitting that Michelle Obama should sport a `VOTE` necklace during her empassioned virtual Democratic National Convention address tonight. 
+Only fitting that Michelle Obama should sport a `VOTE` necklace during her empassioned virtual Democratic National Convention address last night. (Also, yes, I did order a knockoff `VOTE` necklace, this one [donating $5 USD to the League of Women Voters NYC](https://www.uncommongoods.com/product/the-vote-necklace).)  
 
 <img src="https://cdn.cnn.com/cnnnext/dam/assets/200817232549-michelle-obama-vote-necklace-exlarge-169.jpg">
 
@@ -34,6 +34,10 @@ It is *exhausting* and *overwhelming* to discuss things in 2020.
 But, you are not alone. We all are here. Trying to figure out how to move forward.
 
 One way we can move forward towards Election 2020 is to prepare, plan, and be ready. 
+
+Details [vary state to state](https://www.nbcnews.com/specials/plan-your-vote-state-by-state-guide-voting-by-mail-early-in-person-voting-election/) and states are scrambling to clarify what date a mail in ballot [can be accepted](https://www.npr.org/2020/07/13/889751095/signed-sealed-undelivered-thousands-of-mail-in-ballots-rejected-for-tardiness). 
+
+So, how are you planning to vote? 
 
 Enter in our need to [prepare a voting plan](https://www.ncjw.org/wp-content/uploads/2018/09/Create-a-Voting-Plan.pdf).
 
