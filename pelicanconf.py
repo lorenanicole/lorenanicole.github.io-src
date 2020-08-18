@@ -43,7 +43,7 @@ SOCIAL = (('Email', 'mailto:me@lorenamesa.com'),
 	  	  ('Linkedin', 'https://www.linkedin.com/in/lorenamesa'))
 
 # Plugins
-PLUGINS = ['assets']
+PLUGINS = ['pelican_webassets']
 PLUGIN_PATHS = ['{}/plugins'.format(THEME)]
 
 # Publish
