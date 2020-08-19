@@ -7,7 +7,7 @@ This week marks the 100th year anniversary of the 19th Amendment in the United S
 
 <img src="https://www.archives.gov/files/exhibits/featured-documents/amendment-19/images/kaiser-wilson-l.jpg">
 
-For *only* 100 years, women (and to be clear not *all* women, because, history, and that's a topic for another post) whom were citizens in the United States of America gained the right to vote:
+For *only* 100 years, women ([and to be clear not *all* women, because, history, and that's a topic for another post](https://www.npr.org/2020/08/17/903237839/black-women-the-right-to-vote-and-the-19th-amendment?utm_source=email&utm_campaign=gsan-19th-amendment-100th-anniversary&emci=ee06ccc3-ace0-ea11-8b03-00155d0394bb&emdi=b8834557-24e2-ea11-8b03-00155d0394bb&ceid=2591848)) whom were citizens in the United States of America gained the right to vote:
 
 >> The right of citizens of the United States to vote shall not be denied or abridged by the United States or by any State on account of sex. Congress shall have power to enforce this article by appropriate legislation.
 
