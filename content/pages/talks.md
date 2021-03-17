@@ -4,14 +4,28 @@ Summary: Talks
 Slug: talks
 
 <h3 id=conferences>Conference Talks</h3>
-* Python Web Conf Keynote June 2020: [Why I talk about ethics when I talk about technology](https://2020.pythonwebconf.com/speakers/lorena-mesa)
-* Chicago Python User Group Data Special Interest Group June 2020: [¡Escuincla babosa! A Python Deep Learning Telenovela](https://www.youtube.com/watch?v=tD4T1bQWOM8) 
+* International Women's Day PyLadies Chicago March 2021 - Host & [What happens when you type print(‘Hello PyLadies’)? A look at Python internals!](https://youtu.be/yAWCQ-BkqaA)
+* International Women's Day PyLadies Chicago March 2021 - [PyLadies Spotlight with Carol Willing & Naomi Ceder](https://www.youtube.com/watch?v=9gKOzdeefPY) 
+
 <details> 
-<summary> Click here to expand for talks prior to 2020 👇🏽 </summary>
+<summary> Click here to expand for talks prior to 2021 👇🏽 </summary>
+
+	### 2021
+	* International Women's Day PyLadies Chicago March 2021 - Host & [What happens when you type print(‘Hello PyLadies’)? A look at Python internals!](https://youtu.be/yAWCQ-BkqaA)
+	* International Women's Day PyLadies Chicago March 2021 - [PyLadies Spotlight with Carol Willing & Naomi Ceder](https://www.youtube.com/watch?v=9gKOzdeefPY) 
+
+	### 2020
+	* [PyCon Africa 2020 Keynote: Together but apart: Building Python Community in 2020](https://www.youtube.com/watch?v=FDTX_PRp2bA)
+	* [Python Web Conf 2020 Keynote: Why I talk about ethics when I talk about technology](https://2020.pythonwebconf.com/presentations/keynote.html)
+	* [PyCon US 2020: 9 Years of PyLadies: Lessons Learned and What Comes Next](https://pyvideo.org/pycon-us-2020/9-years-of-pyladies-lessons-learned-and-what-comes-next.html)
+	* [Conoce PyLadies: Presentamos Mar Sánchez](https://www.youtube.com/watch?v=eUDTpK7de5Q)
+	* [Python Mexico 2020: 9 Años de PyLadies: Lecciones Aprendidas y Lo Que Viene Después](https://www.meetup.com/__PyMX__/events/272386679/)
+	* Chicago Python User Group Data Special Interest Group June 2020: [¡Escuincla babosa! A Python Deep Learning Telenovela](https://www.youtube.com/watch?v=tD4T1bQWOM8) 
+	* [PyCascades 2020: 9 Years of PyLadies: Lessons Learned and What Comes Next](https://2020.pycascades.com/talks/9-years-of-pyladies-lessons-learned-and-what-comes-next/)
 
 	### 2019
 	* [Opening Remarks: Loyola University Center for Digital Ethics and Policy Digital Ethics Award](https://www.digitalethics.org/events/center-digital-ethics-and-policy-launches-annual-award-digital-ethics) November 2019
-	* [Python Brasil Keynot e October 2019](https://2019.pythonbrasil.org.br)
+	* [Python Brasil Keynote October 2019](https://2019.pythonbrasil.org.br)
 	* PyCon LayAm Keynote September 2019 - [A line of Python is written and then ...? Exploring the fortuitous impact of el efecto mariposa de Python.](https://www.pylatam.org/ponentes-principales/#lorena)
 	* Strange Loop September 2019 - [¡Escuincla babosa! A Python Deep Learning Telenovela](https://www.thestrangeloop.com/2019/escuincla-babosa-a-python-deep-learning-telenovela.html)
 	* PyCon USA May 2019 - [¡Escuincla babosa!: Creating a telenovela script with a neural network](https://www.youtube.com/watch?v=VWDoQPm5Ozw)
@@ -45,6 +59,7 @@ Slug: talks
 </details>
 
 <h3 id=media>Media</h3>
+* Business Insider: [Meet PyLadies, the women-led group helping 120,000 coders across the globe land jobs and diversify the popular Python programming language](https://www.businessinsider.com/pyladies-python-programming-language-software-developers-women-2021-3) - March 2021
 * [Negocios Now: Latinos 40 Under 40 Class of 2018](https://negociosnow.com/meet-lorena-mesa-latinos-40-under-40-class-of-2018/) March 2019
 * [#DeleteFacebook: Is It Time to Say Farewell to Facebook?](https://news.wttw.com/2019/01/08/deletefacebook-it-time-say-farewell-facebook) January 2019
 * [Crain's Chicago Business Tech Top 50](http://www.chicagobusiness.com/static/section/tech-50@page=mesa.html) August 2018
