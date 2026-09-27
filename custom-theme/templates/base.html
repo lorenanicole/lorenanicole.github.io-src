@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="{{ AUTHOR }}">
+  <meta name="description" content="{% block description %}{{ SITENAME }} - Technical leadership in Python, AI, and open source.{% endblock %}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% block og_title %}{{ SITENAME }}{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}{{ self.description() }}{% endblock %}">
+  <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+  <meta property="og:url" content="{{ SITEURL }}{% block og_url %}{% endblock %}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@loooorenanicole">
+  <meta name="twitter:title" content="{% block twitter_title %}{{ SITENAME }}{% endblock %}">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Structured Data -->
+  {% include "schema.html" %}
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#059669',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+  </style>
+
+  <!-- Feeds -->
+  {% if FEED_ALL_ATOM %}
+  <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed">
+  {% endif %}
+  {% if FEED_ALL_RSS %}
+  <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed">
+  {% endif %}
+
+
+  <!-- Analytics -->
+  {% if GOOGLE_ANALYTICS_ID %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ GOOGLE_ANALYTICS_ID }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ GOOGLE_ANALYTICS_ID }}');
+  </script>
+  {% endif %}
+
+  <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+</head>
+
+<body class="bg-black text-slate-100 antialiased">
+  <header class="border-b border-slate-800 py-8 mb-16">
+    <div class="max-w-4xl mx-auto px-8">
+      <div class="flex justify-between items-end gap-12">
+        <!-- Branding -->
+        <div class="flex items-end gap-6 flex-1">
+          {% if USER_LOGO_URL %}
+          <img src="{{ USER_LOGO_URL }}" alt="{{ AUTHOR }}" class="w-20 h-20 rounded-full border-2 border-slate-700 flex-shrink-0">
+          {% endif %}
+          <div class="pb-1">
+            <h1 class="text-2xl font-bold mb-0.5">
+              <a href="{{ SITEURL }}/" class="text-slate-100 hover:text-accent">{{ SITENAME }}</a>
+            </h1>
+            <p class="text-sm text-slate-400 leading-tight">{{ TAGLINE }}</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex gap-8 pb-1" aria-label="Main navigation">
+          {% for name, link in LINKS %}
+          <a href="{{ link }}" class="text-sm font-medium text-slate-400 hover:text-accent transition-colors">{{ name }}</a>
+          {% endfor %}
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="min-h-screen">
+    <div class="max-w-4xl mx-auto px-8">
+      {% block content %}{% endblock %}
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-800 mt-16 py-12">
+    <div class="max-w-4xl mx-auto px-8">
+      <div class="flex justify-center gap-8 mb-6 flex-wrap">
+        <a href="{{ SITEURL }}/feeds/all.atom.xml" class="text-sm text-slate-400 hover:text-accent">Atom Feed</a>
+        <a href="{{ SITEURL }}/sitemap.xml" class="text-sm text-slate-400 hover:text-accent">Sitemap</a>
+      </div>
+
+      <ul class="flex justify-center gap-6 list-none mb-6 flex-wrap">
+        {% for name, link in SOCIAL %}
+        <li><a href="{{ link }}" title="{{ name }}" class="text-sm text-slate-400 hover:text-accent transition-colors">{{ name }}</a></li>
+        {% endfor %}
+      </ul>
+
+      <p class="text-center text-xs text-slate-500">
+        &copy; 2014-{{ CURRENT_YEAR }} <a href="{{ SITEURL }}" class="text-slate-400 hover:text-accent">{{ AUTHOR }}</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

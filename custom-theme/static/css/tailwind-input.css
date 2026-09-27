@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100;
+  }
+
+  a {
+    @apply text-accent hover:opacity-80 transition-opacity;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+
+  code {
+    @apply bg-slate-100 dark:bg-slate-900 text-red-600 dark:text-red-400 px-1 py-0.5 rounded text-sm;
+  }
+
+  pre {
+    @apply bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 border-l-4 border-l-accent p-4 overflow-x-auto my-6 rounded text-sm leading-relaxed;
+  }
+
+  pre code {
+    @apply bg-transparent text-inherit p-0 rounded-none;
+  }
+}

@@ -1,0 +1,80 @@
+<!-- Person Schema (author/site owner) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ AUTHOR }}",
+  "url": "{{ SITEURL }}",
+  "email": "me@lorenamesa.com",
+  "image": "{{ USER_LOGO_URL }}",
+  "sameAs": [
+    "https://twitter.com/loooorenanicole",
+    "https://github.com/lorenanicole",
+    "https://www.linkedin.com/in/lorenamesa"
+  ],
+  "jobTitle": "Backend Engineer & Technical Leader",
+  "knowsAbout": [
+    "Python Programming",
+    "Backend Engineering",
+    "AI/LLM Integration",
+    "Open Source Development",
+    "Technical Leadership",
+    "Community Building"
+  ],
+  "description": "Backend engineer passionate about Python, AI integration, and building inclusive open source communities."
+}
+</script>
+
+<!-- Article Schema (for blog posts) -->
+{% if article %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ article.title }}",
+  "description": "{{ article.summary or article.title }}",
+  "image": "{{ USER_LOGO_URL }}",
+  "datePublished": "{{ article.date.isoformat() }}",
+  {% if article.modified %}"dateModified": "{{ article.modified.isoformat() }}",{% endif %}
+  "author": {
+    "@type": "Person",
+    "name": "{{ article.author|default(AUTHOR) }}",
+    "url": "{{ SITEURL }}"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ SITEURL }}/{{ article.url }}"
+  }
+}
+</script>
+{% endif %}
+
+<!-- BreadcrumbList Schema -->
+{% if article %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ SITEURL }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "{{ SITEURL }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ article.title }}",
+      "item": "{{ SITEURL }}/{{ article.url }}"
+    }
+  ]
+}
+</script>
+{% endif %}

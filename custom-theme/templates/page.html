@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} - {{ SITENAME }}{% endblock %}
+
+{% block description %}{{ page.summary or page.title }}{% endblock %}
+
+{% block og_title %}{{ page.title }}{% endblock %}
+{% block og_description %}{{ page.summary or page.title }}{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block og_url %}/{{ page.url }}{% endblock %}
+
+{% block content %}
+<article class="page max-w-3xl">
+  <h1 class="text-4xl font-bold mb-8">{{ page.title }}</h1>
+
+  <div class="page-content text-slate-300 leading-relaxed space-y-6">
+    {{ page.content }}
+  </div>
+</article>
+
+<style>
+.page-content h2 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #f1f5f9;
+}
+
+.page-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #f1f5f9;
+}
+
+.page-content p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+
+.page-content ul, .page-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.page-content li {
+  margin-bottom: 0.5rem;
+}
+
+.page-content a {
+  color: #059669;
+  text-decoration: underline;
+  transition: opacity 0.2s;
+}
+
+.page-content a:hover {
+  opacity: 0.8;
+}
+
+.page-content strong {
+  color: #f1f5f9;
+  font-weight: 600;
+}
+
+.page-content em {
+  font-style: italic;
+}
+
+.page-content code {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.page-content blockquote {
+  border-left: 3px solid #059669;
+  padding-left: 1rem;
+  color: #94a3b8;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+.page-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.page-content th, .page-content td {
+  border: 1px solid #334155;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.page-content th {
+  background-color: #1e293b;
+  color: #f1f5f9;
+  font-weight: 600;
+}
+
+.page-content tr:nth-child(even) {
+  background-color: rgba(30, 41, 59, 0.5);
+}
+
+.page-content tr:hover {
+  background-color: rgba(5, 150, 105, 0.1);
+}
+</style>
+{% endblock %}

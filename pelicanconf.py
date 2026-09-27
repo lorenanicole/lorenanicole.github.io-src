@@ -10,7 +10,7 @@ CURRENT_DIR_PATH = Path(__file__).resolve().parent
 AUTHOR = 'Lorena Mesa'
 SITENAME = 'Lorena Mesa'
 SITEURL = 'https://lorenamesa.com' # 'http://localhost:8000'  
-THEME = '{}/voce'.format(CURRENT_DIR_PATH)
+THEME = '{}/custom-theme'.format(CURRENT_DIR_PATH)
 PATH = 'content'
 
 # General Settings
@@ -26,25 +26,31 @@ FEED_DOMAIN = 'http://lorenamesa.com'  #'http://localhost:8000'
 
 # Page Settings
 PAGE_SAVE_AS = '{slug}.html'
+PAGE_URL = '{slug}.html'
+PAGE_TEMPLATE = 'page'
+ARTICLE_SAVE_AS = '{slug}.html'
+ARTICLE_URL = '{slug}.html'
+ARTICLE_TEMPLATE = 'article'
 TAGS_URL = 'tags.html'
 ARCHIVES_URL = 'archive.html'
 
-# Blogroll
-LINKS = (('Home', '/index.html'),
-         ('About', '/about.html'),
-         ('Speaker Info', '/speaker-info.html'),
-     	 ('Talks', '/talks.html'),
-         ('Values', '/values.html'))
+# Navigation
+LINKS = (('About', '/about.html'),
+         ('Speaking', '/speaking.html'),
+         ('Open Source', '/open-source.html'),
+         ('Connect', '/connect.html'))
 
 # Social Accounts
 SOCIAL = (('Email', 'mailto:me@lorenamesa.com'),
           ('GitHub', 'http://github.com/lorenanicole'),
-	  	  ('Twitter', 'https://twitter.com/loooorenanicole'),
-	  	  ('Linkedin', 'https://www.linkedin.com/in/lorenamesa'))
+	  	  ('Mastodon', 'https://mastodon.social/@Lorenanicole'),
+	  	  ('tweet.app', 'https://app.tweet.app/user/lorena'),
+	  	  ('LinkedIn', 'https://www.linkedin.com/in/lorenamesa'),
+	  	  ('Substack', 'https://substack.com/@lorenamesa'))
 
 # Plugins
-PLUGINS = ['pelican_webassets']
-PLUGIN_PATHS = ['{}/plugins'.format(THEME)]
+PLUGINS = []
+PLUGIN_PATHS = []
 
 # Publish
 DELETE_OUTPUT_DIRECTORY = False
@@ -53,6 +59,7 @@ DELETE_OUTPUT_DIRECTORY = False
 GOOGLE_ANALYTICS_ID = 'UA-124341551-1'
 GOOGLE_ANALYTICS_PROP = 'Lorena Mesa Personal'
 USER_LOGO_URL = 'https://www.gravatar.com/avatar/7f279cdd4dcbc3b5b98deed921ba86a2?s=500'
+TAGLINE = 'Python • AI • Community Leader'
 MANGLE_EMAILS = True
 FUZZY_DATES = True
 CURRENT_YEAR = datetime.now().year
@@ -60,7 +67,7 @@ ARTIST_URL = 'https://www.instagram.com/agpesty/?hl=en'
 
 # Sitemap
 SITEMAP_SAVE_AS = 'sitemap.xml'
-DIRECT_TEMPLATES = ['sitemap', 'index']
+DIRECT_TEMPLATES = ['index']
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

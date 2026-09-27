@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }} - {{ SITENAME }}{% endblock %}
+
+{% block description %}{{ article.summary or article.title }}{% endblock %}
+
+{% block og_title %}{{ article.title }}{% endblock %}
+{% block og_description %}{{ article.summary or article.title }}{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block og_url %}/{{ article.url }}{% endblock %}
+
+{% block content %}
+<article class="max-w-2xl">
+  <header class="mb-8">
+    <h1 class="text-4xl font-bold mb-4">{{ article.title }}</h1>
+
+    <div class="flex items-center gap-4 text-sm text-slate-400">
+      <time datetime="{{ article.date.isoformat() }}">
+        {{ article.date.strftime('%B %d, %Y') }}
+      </time>
+      {% if article.category %}
+      <a href="{{ SITEURL }}/{{ article.category.url }}" class="text-accent hover:opacity-80">{{ article.category }}</a>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="article-content text-slate-300 mb-8 leading-relaxed space-y-6">
+    {{ article.content }}
+  </div>
+
+  {% if article.tags %}
+  <div class="border-t border-slate-700 pt-6 mb-8">
+    <p class="text-sm text-slate-400 mb-2">Tags:</p>
+    <div class="flex flex-wrap gap-2">
+      {% for tag in article.tags %}
+      <a href="{{ SITEURL }}/{{ tag.url }}" class="text-xs bg-slate-800 text-slate-300 px-3 py-1 rounded hover:bg-slate-700 transition-colors">
+        {{ tag }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</article>
+
+<nav class="border-t border-slate-700 mt-12 pt-8" role="navigation" aria-label="Articles">
+  <div class="flex justify-between gap-6">
+    {% if article.prev_article %}
+    <div class="flex-1">
+      <p class="text-xs text-slate-500 mb-2">← Previous</p>
+      <a href="{{ SITEURL }}/{{ article.prev_article.url }}" class="text-accent hover:opacity-80 line-clamp-2">{{ article.prev_article.title }}</a>
+    </div>
+    {% endif %}
+
+    {% if article.next_article %}
+    <div class="flex-1 text-right">
+      <p class="text-xs text-slate-500 mb-2">Next →</p>
+      <a href="{{ SITEURL }}/{{ article.next_article.url }}" class="text-accent hover:opacity-80 line-clamp-2">{{ article.next_article.title }}</a>
+    </div>
+    {% endif %}
+  </div>
+</nav>
+
+<style>
+.article-content h2 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #f1f5f9;
+}
+
+.article-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #f1f5f9;
+}
+
+.article-content p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+
+.article-content ul, .article-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.article-content li {
+  margin-bottom: 0.5rem;
+}
+
+.article-content a {
+  color: #059669;
+  text-decoration: underline;
+  transition: opacity 0.2s;
+}
+
+.article-content a:hover {
+  opacity: 0.8;
+}
+
+.article-content strong {
+  color: #f1f5f9;
+  font-weight: 600;
+}
+
+.article-content em {
+  font-style: italic;
+}
+
+.article-content code {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.article-content blockquote {
+  border-left: 3px solid #059669;
+  padding-left: 1rem;
+  color: #94a3b8;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+.article-content pre {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  line-height: 1.5;
+}
+
+.article-content pre code {
+  background: none;
+  color: #cbd5e1;
+  padding: 0;
+  border-radius: 0;
+}
+</style>
+{% endblock %}

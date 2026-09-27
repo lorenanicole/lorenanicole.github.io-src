@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}Blog - {{ SITENAME }}{% endblock %}
+
+{% block description %}Technical blog posts on Python, AI, backend engineering, and open source.{% endblock %}
+
+{% block content %}
+<section class="max-w-2xl">
+  <!-- Hero Section -->
+  <div class="mb-16">
+    <h1 class="text-5xl font-bold mb-4">Technical rigor. Human consequences.</h1>
+    <p class="text-xl text-slate-300 mb-8">Notes on engineering, AI, and the people it all affects.</p>
+
+    <div class="text-slate-400 space-y-2">
+      <p>I'm Lorena Mesa. Software engineer, PSF Fellow and Ex-Chairperson, PyLadies Chicago founder, and occasional Starfleet enthusiast. Abides by the motto to live long, Python, and prosper. 🖖</p>
+    </div>
+  </div>
+
+  {% if articles %}
+  <!-- Featured Post -->
+  {% if articles|length > 0 %}
+  <div class="bg-slate-800/50 border border-slate-700 rounded-lg p-8 mb-16">
+    <div class="text-sm text-slate-400 mb-4">
+      LATEST · {{ articles[0].date.strftime('%b %Y').upper() }}
+    </div>
+    <h2 class="text-3xl font-bold mb-4">
+      <a href="{{ SITEURL }}/{{ articles[0].url }}" class="text-slate-100 hover:text-accent transition-colors">{{ articles[0].title }}</a>
+    </h2>
+    {% if articles[0].summary %}
+    <p class="text-slate-300 mb-6 text-lg leading-relaxed">
+      {{ articles[0].summary }}
+    </p>
+    {% endif %}
+    <a href="{{ SITEURL }}/{{ articles[0].url }}" class="inline-block text-accent hover:opacity-80 font-medium">read →</a>
+  </div>
+  {% endif %}
+
+  <!-- Archive Header -->
+  <h3 class="text-2xl font-bold mb-8 text-slate-200">Archive</h3>
+  <div class="space-y-12">
+    {% for article in articles[1:] %}
+    <article class="border-b border-slate-700 pb-8">
+      <h2 class="text-2xl font-bold mb-2">
+        <a href="{{ SITEURL }}/{{ article.url }}" class="text-slate-100 hover:text-accent transition-colors">{{ article.title }}</a>
+      </h2>
+
+      <div class="flex items-center gap-4 text-sm text-slate-400 mb-4">
+        <time datetime="{{ article.date.isoformat() }}">
+          {{ article.date.strftime('%B %d, %Y') }}
+        </time>
+        {% if article.category %}
+        <a href="{{ SITEURL }}/{{ article.category.url }}" class="text-accent hover:opacity-80">{{ article.category }}</a>
+        {% endif %}
+      </div>
+
+      {% if article.summary %}
+      <div class="text-slate-300 mb-4">
+        {{ article.summary }}
+      </div>
+      {% endif %}
+
+      <a href="{{ SITEURL }}/{{ article.url }}" class="inline-block text-accent hover:opacity-80 font-medium">Read more →</a>
+    </article>
+    {% endfor %}
+  </div>
+
+  {% if page is defined and (page.has_previous() or page.has_next()) %}
+  <nav class="flex gap-4 mt-12 pt-8 border-t border-slate-700" aria-label="Blog pagination">
+    {% if page.has_previous() %}
+    <a href="{{ SITEURL }}/{{ page.previous_page_url() }}" class="text-accent hover:opacity-80">← Previous</a>
+    {% endif %}
+
+    {% if page.has_next() %}
+    <a href="{{ SITEURL }}/{{ page.next_page_url() }}" class="text-accent hover:opacity-80">Next →</a>
+    {% endif %}
+  </nav>
+  {% endif %}
+
+  {% else %}
+  <p class="text-slate-300">No blog posts yet. Check back soon!</p>
+  {% endif %}
+</section>
+{% endblock %}

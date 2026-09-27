@@ -1,69 +1,117 @@
 Template: generic_page
-Title: Speaker Info
-Summary: Speaker Information 
-Slug: speaker-info
+Title: Speaking
+Slug: speaking
+Summary: Speaking engagements and topics
 
-# I am passionate about speaking because I believe that each of us can leave more than we take. As a public speaker I aim to raise awareness, motivate, and ultimately introduce you to something new.
+I'm passionate about speaking because I believe we can leave more than we take. As a public speaker, I aim to raise awareness, inspire, and introduce new ideas — grounded in technical depth and practical experience.
 
-###_Who I am as a speaker._
+## My Approach to Speaking
 
-Community engagement and curiosity have greatly empowered me as a technologist. Through exploration and contributing/using open source I have developed a knack for deconstructing complex topics. That's actually what inspired my first technical talk. 
+Through open source work and community engagement, I've learned to deconstruct complex technical topics and make them accessible. My talks emphasize content over acronyms, focusing on the "why" and "how" rather than buzzwords.
 
-While speaking on the latest and greatest in tech may be exciting, that's not why I speak. I speak to inspire others to try something new. Speaking also allows me to give back to the open source community. Energy and curiosity are defining traits of me as a speaker. Additionally my talks often employ a lens of accessibility by focusing on the technical content rather than the acrynonyms and buzz words surrounding the topic.
+As someone committed to ethical and inclusive events, I won't participate in conferences that lack a [Code of Conduct](https://www.ashedryden.com/blog/codes-of-conduct-101-faq). I frequently teach workshops and speak at community conferences, with many talks archived at [PyVideo](https://pyvideo.org/speaker/lorena-mesa.html) and slides available on [Speaker Deck](https://speakerdeck.com/lorenanicole).
 
-As an educator and etc (e.g. building diverse practices) consultant, I've taught and worked with many diverse populations. Therefore I won't participate in events that lack a [Code of Conduct](https://www.ashedryden.com/blog/codes-of-conduct-101-faq). I frequently teach workshops (often of my own creation) at [PyLadies Chicago](https://www.meetup.com/Chicago-PyLadies/events/253170166/) and often speak at home grown, community conferences. Curious in seeing some of my talks? Many are archived at [PyVideo](https://pyvideo.org/speaker/lorena-mesa.html) and various slides from my talks can be found on my [Speaker Deck](https://speakerdeck.com/lorenanicole). Additionally my talking history can be found [here](/talks.html).
+## Topics I'm Currently Interested In
 
-###_What topics or things am I interested in contributing to?_
+- **Backend Engineering, Fullstack & Python** — System design, async patterns, performance
+- **AI/LLM Integration** — Building production features responsibly
+- **Open Source** — Sustainable practices, community building
+- **Data Ethics** — Responsible AI, ethical ML practices
+- **Technical Leadership** — Mentorship, scaling teams
+- **Diversity & Inclusion** — Building inclusive tech communities
 
-Mediums I've spoken in and/or ways I contribute as a speaker and writer:
+(And more — I'm always curious about new technical challenges!)
 
-- [Podcasts](/talks.html#podcasts)
-- [Technical writing and editing](/talks.html#writing)
-- [Conference speaking](/talks.html#conferences)
-- Coaching
-- Instructional workshops and/or classes
+## Speaking Mediums
 
-As per the topics I'm interested in, well these vary, but some I'm currently interested in:
+- Conference keynotes and talks
+- Podcast interviews
+- Instructional workshops and classes
+- Coaching and mentorship
+- Technical writing and editing
 
-- Diversity and inclusion (e.g. writing a code of conduct and enforcing it, translation as it relates to tech, D&I teams/pratices)
-- Data Science / Machine Learning (e.g. learning how to, productionalizing)
-- Python 
-- Ethics in Data Science / Machine Learning (e.g. building ethical pratices, trends in ethics, what is the state of the world of ethics in this space)
-- Civic tech
-- Learning to code
-- Leveling up as a coder and/or technologist
-- Mentoring / coaching
-- Remote work 
-- Work / Life balance
-- Self-care
-- Translation in open source
-- Open Source (e.g. building sustainable open source practices, getting started in open source)
-- Technical writing!
-- Y más!
+## What You Can Expect From Me
 
-###_Where am I speaking next and what's my availability._ 
+- Thoroughly researched and well-prepared talks
+- Slides available for review before the event
+- Thoughtful engagement with audience questions
+- A dynamic presentation grounded in real experience
+- If workshops: professional facilitation and customized content
 
-I'm accepting *virtual only* speaking opportunities through the end of 2020. That said, let's try something creative! What are you thinking?
+## What I Expect From You
 
-### Hablamos español Lorena, puedes crear contenido para nuestra comunidad?
+- Honorarium/speaking fee (for for-profit conferences)
+- Travel and lodging accommodations
+- Clear speaker agreement and timeline
+- Professional event management
 
-¡Sí! Si quieres una charla en español podemos organizar una. Mandame los detalles por email incluyendo la duración de la charla, el tema y cualquier detalle financiero si es necesario.  
+For community conferences, I'm happy to discuss financial support on a case-by-case basis. Workshops require payment depending on length and scope.
 
-###_What you can expect from me._
+**Note:** I speak in English and Spanish. For charlas en español, let's arrange the details.
 
-I tote my own equipment - that is a MacBook Pro. I often employ a slide stack using Google Slides. If you require additional equipment, please communicate that in your request. 
+## Speaking Inquiries
 
-More questions or have a propose in mind? Please drop me a [line](mailto:me@lorenamesa.com?subject=Speaking+Inquiry), I'd love to chat!
+**Interested in having me speak?** Drop me a [line](mailto:me@lorenamesa.com?subject=Speaking+Inquiry) with the following details:
 
-###_Therefore, what can I expect from you._
+| Information | Details |
+|------------|---------|
+| **Event name & date** | When and where is the event? |
+| **Conference/event type** | Corporate, community, academic, etc. |
+| **Talk topic or length** | Subject area and duration (30 min, 60 min, workshop, etc.) |
+| **Audience size & background** | Number of attendees and their technical level |
+| **Financial details** | Budget, honorarium, or community basis |
 
-An animated and throughly researched talk, well prepared with slides available for review well before the conference (as defined by the speaker agreement)!
+---
 
-Preparing a talk involves hours of preparation including research, writing, and countless hours of etc work. If you are from a for profit conference depending on the speaking opportunity you inquire about that can impact the speaking honorarium/fee. At the minimum, travel and lodging accommodations are expected. Not sure what you can support? Reach [out](mailto:me@lorenamesa.com?subject=Speaking+Inquiry)! For community conferences I am happy to discuss financial support as well. 
+## Recent & Featured Talks
 
-Workshops, in short, require payment and depend on the length of workshop required and more. 
+### 2023
+- **PyCon APAC 2023 Keynote** (Tokyo, Japan) — [Through the Looking Glass: 10 Years of Python Organizing Lessons and Tribulations](https://www.youtube.com/watch?v=lBRJgyiklyg)
 
+### 2021
+- **International Women's Day PyLadies Chicago** — [What happens when you type print('Hello PyLadies')? A look at Python internals!](https://youtu.be/yAWCQ-BkqaA)
+- **PyLadies Spotlight** — [Carol Willing & Naomi Ceder](https://www.youtube.com/watch?v=9gKOzdeefPY)
 
+### 2020
+- **PyCon Africa 2020 Keynote** — [Together but apart: Building Python Community in 2020](https://www.youtube.com/watch?v=FDTX_PRp2bA)
+- **Python Web Conf 2020 Keynote** — [Why I talk about ethics when I talk about technology](https://2020.pythonwebconf.com/presentations/keynote.html)
+- **PyCon US 2020** — [9 Years of PyLadies: Lessons Learned and What Comes Next](https://pyvideo.org/pycon-us-2020/9-years-of-pyladies-lessons-learned-and-what-comes-next.html)
+- **Chicago Python User Group** — [¡Escuincla babosa! A Python Deep Learning Telenovela](https://www.youtube.com/watch?v=tD4T1bQWOM8)
 
+<details>
+<summary>Click to expand full speaking history</summary>
 
+### 2019
+- **Python Brasil Keynote** — October 2019
+- **PyCon LayAm Keynote** — [A line of Python is written and then...? Exploring the fortuitous impact of el efecto mariposa de Python](https://www.pylatam.org/ponentes-principales/#lorena)
+- **Strange Loop** — [¡Escuincla babosa! A Python Deep Learning Telenovela](https://www.thestrangeloop.com/2019/escuincla-babosa-a-python-deep-learning-telenovela.html)
+- **PyCon USA** — [¡Escuincla babosa!: Creating a telenovela script with a neural network](https://www.youtube.com/watch?v=VWDoQPm5Ozw)
 
+### 2018
+- **PyCon Sweden Keynote** — [Now is better than Never: What the Zen of Python can teach us about Data Ethics](https://pycon.se)
+- **Northbay Python** — [¡Escuincla babosa!: Creating a telenovela script with a neural network](https://2018.northbaypython.org/schedule/presentation/25/)
+- **PyCon España Keynote** — [Now is better than Never: What the Zen of Python can teach us about Data Ethics](https://2018.es.pycon.org/speakers/lorena-mesa)
+- **PyOhio Keynote** — [Now is better than Never: What the Zen of Python can teach us about Data Ethics](https://www.youtube.com/watch?v=8mHMWQCCEdY)
+
+### 2017
+- **DjangoCon USA** — [Using Django, Docker, and Scikit-learn to Bootstrap Your Machine Learning Project](https://pyvideo.org/djangocon-us-2017/using-django-docker-and-scikit-learn-to-bootstrap-your-machine-learning-project.html)
+- **Open Source Bridge** — [Democratizing Data: What You Need to Know as a Developer to Keep Your Data Collection and Usage Ethical](http://opensourcebridge.org/sessions/1994)
+
+### Earlier Talks
+- **EuroPython 2016** — [Is that spam in my ham? A novice's inquiry into classification](https://pyvideo.org/europython-2016/is-that-spam-in-my-ham.html)
+- **PyOhio 2015** — [Is that spam in my ham? A novice's inquiry into classification](https://pyvideo.org/pyohio-2015/is-that-spam-in-my-ham-a-novice-inquiry-into-c.html)
+
+</details>
+
+## Media & Features
+
+- **The Noun Project (2023)** — [Spotlight: Lorena Mesa, Director & Chair of Python Software Foundation](https://blog.thenounproject.com/spotlight-lorena-mesa-director-chair-python-software-foundation/)
+- **Business Insider (2021)** — [Meet PyLadies, the women-led group helping 120,000 coders across the globe](https://www.businessinsider.com/pyladies-python-programming-language-software-developers-women-2021-3)
+- **Crain's Chicago Business (2018)** — [Tech Top 50](http://www.chicagobusiness.com/static/section/tech-50@page=mesa.html)
+- **Negocios Now (2019)** — [Latinos 40 Under 40](https://negociosnow.com/meet-lorena-mesa-latinos-40-under-40-class-of-2018/)
+
+## Podcast Appearances
+
+- **Talk Python to Me** — [Getting your first dev job as a Python developer](https://talkpython.fm/episodes/show/41/getting-your-first-dev-job-as-a-python-developer-part-2)
+- **Podcast.__init__** — [Lorena Mesa](https://www.podcastinit.com/episode-78-lorena-mesa/)
+- **Greater Than Code** — [Lorena Mesa](http://www.greaterthancode.com/podcast/episode-023-lorena-mesa/)
