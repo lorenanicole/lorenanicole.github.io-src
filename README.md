@@ -99,24 +99,31 @@ Page content...
 
 ## Building & Publishing
 
-### Build the site:
+### Build the site locally:
 ```bash
 poetry run pelican content -o output -s pelicanconf.py
 ```
 
-### Publish (GitHub Pages):
-The `output/` directory is a git submodule pointing to the published repository. To publish:
+### Publish to GitHub Pages:
+The `output/` directory is a git submodule pointing to the published repository (`lorenanicole.github.io`). After building:
 
+**1. Push built files to published repository:**
 ```bash
 cd output
 git add .
-git commit -m "Update site"
-git push origin main
+git commit -m "Publish rebuilt site"
+git push origin master
 cd ..
+```
+
+**2. Update source repository to track new output:**
+```bash
 git add output
 git commit -m "Update published output"
-git push origin main
+git push origin master
 ```
+
+The site will then be live at https://lorenamesa.com within seconds.
 
 ## Design & Styling
 
