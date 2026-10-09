@@ -1,15 +1,16 @@
 Title: The Refit: What Python 3.15 Actually Looks Like When You Ship It
-Date: 2026-10-10
+Date: 2026-10-09
 Author: Lorena Mesa
 Category: Python
 Tags: Python, Python 3.15, AI, LLMs, Agentic Coding, PydanticAI, uv, FastAPI, RAG, PostgreSQL, Railway, Playwright, Chicago, Star Trek
 Slug: the-refit-python-315
+Summary: Python 3.15 final shipped today. Here's what it actually looks like in production — lazy imports, frozendict, sentinel, a stdlib sampling profiler, and a 7-12% JIT — in EventLoop, a Chicago events chatbot on Python 3.15, uv, FastAPI and PydanticAI.
 
 I have a confession. When the Star Trek reboot dropped in 2009 and everyone started using "warp speed" as a metaphor for tech velocity, I rolled my eyes — not because I'm not a fan, but because I *am*. I grew up on TNG (Star Trek: The Next Generation — Picard's Enterprise, the holodeck, the best theme music in television history). I'm working through Klingon with the [Klingon Language Institute](https://www.kli.org/members-only/klcp-prep/), I have the Vulcan salute in muscle memory, and I own three Maine Coons including Purrcard my tuxedo boy, which I think qualifies me as a Data apologist. So when I say Python 3.15 feels like a freshly refit Enterprise — more capable, leaner, the crew the same but the ship better — I mean it with full nerd sincerity.
 
-In my [last post]({filename}why-im-blogging-again.md), I wrote about how AI has collapsed the old divisions in software engineering. This post gets specific. I've been building **EventLoop** — a Chicago events discovery chatbot. A Python backend that scrapes venue calendars, talks to Claude via PydanticAI, and serves a streaming SSE chat API to a TypeScript frontend. I built it on Python 3.15 (final released October 9th, 2026). Here's what that looks like, where 3.15 shines, and why — if you're building AI pipelines in 2026 — it's the version to be on.
+In my [last post]({filename}why-im-blogging-again.md), I wrote about how AI has collapsed the old divisions in software engineering. This post gets specific. I've been building **EventLoop** — a Chicago events discovery chatbot, now live at **[eventloop.city](https://eventloop.city)**. A Python backend that scrapes venue calendars, talks to Claude via PydanticAI, and serves a streaming SSE chat API to a TypeScript frontend. I built it on the Python 3.15 release candidates; final dropped the morning this went up. Here's what that looks like, where 3.15 shines, and why — if you're building AI pipelines in 2026 — it's the version to be on.
 
-<div id="lcars-panel" style="margin:2.5rem auto;max-width:620px;font-family:monospace;"></div>
+<div id="lcars-panel" style="margin:2.5rem auto;max-width:620px;font-family:monospace;"><noscript><img src="/images/refit-python-315-card.svg" alt="EventLoop LCARS mission brief — STARDATE 2026.282, Python 3.15, FastAPI, PydanticAI, 569 tests, Railway" style="width:100%;border-radius:4px;"></noscript></div>
 <script>
 (function(){
   var el=document.getElementById('lcars-panel');
@@ -39,7 +40,7 @@ In my [last post]({filename}why-im-blogging-again.md), I wrote about how AI has 
   svg+='<text x="'+W/2+'" y="15" text-anchor="middle" font-family="monospace" font-size="10" font-weight="bold" fill="'+BG+'" letter-spacing="2">STARFLEET MISSION BRIEF — SECTOR CHICAGO-ILL</text>';
   // Content area
   var CX=88,CY=44,CW=W-176;
-  svg+='<text x="'+CX+'" y="'+(CY+14)+'" font-family="monospace" font-size="9" fill="'+AMBER+'" letter-spacing="2">STARDATE 2026.283</text>';
+  svg+='<text x="'+CX+'" y="'+(CY+14)+'" font-family="monospace" font-size="9" fill="'+AMBER+'" letter-spacing="2">STARDATE 2026.282</text>';
   svg+='<text x="'+(CX+CW)+'" y="'+(CY+14)+'" text-anchor="end" font-family="monospace" font-size="9" fill="'+BLUE+'" letter-spacing="2">CLASSIFICATION: OPEN SOURCE</text>';
   // Chicago flag
   var FX=CX,FY=CY+24,FW=196,FH=104;
@@ -88,7 +89,7 @@ In my [last post]({filename}why-im-blogging-again.md), I wrote about how AI has 
 
 ## What Is EventLoop?
 
-EventLoop answers questions like *"what's happening in Logan Square this weekend?"* with real answers — pulled from a **PostgreSQL** database of scraped Chicago venue events, optionally enriched by a live Google Events fallback via SerpAPI. The chatbot uses Claude Sonnet 5.5 via PydanticAI, a Claude Haiku 4.5-powered intent classifier to gate the expensive agent, and a semantic embedding index (model2vec — no torch dependency, queries in ~0.3ms) for fast local retrieval.
+EventLoop answers questions like *"what's happening in Logan Square this weekend?"* with real answers — pulled from a **PostgreSQL** database of scraped Chicago venue events, optionally enriched by a live Google Events fallback via SerpAPI (which times out on roughly a third of calls at 90s — the local database answers first, so a dropped web search degrades rather than breaks the response). The chatbot uses Claude Sonnet 5.5 via PydanticAI, a Claude Haiku 4.5-powered intent classifier to gate the expensive agent, and a semantic embedding index (model2vec — no torch dependency, queries in ~0.3ms) for fast local retrieval.
 
 **Three services on Railway, one PostgreSQL database:**
 
@@ -111,7 +112,7 @@ The stack:
 
 ## uv: The Transporter Beam for Python Environments
 
-Before the language features: **uv**, now at version **0.12.24**, has supported Python 3.15 since [#18552](https://github.com/astral-sh/uv/pull/18552) (merged March 18, 2026) — tracking every alpha, beta, and release candidate long before final dropped.
+Before the language features: **uv**, now at version **0.12.24**, has listed Python 3.15 as supported since [#18552](https://github.com/astral-sh/uv/pull/18552) (merged March 18, 2026) — tracking every alpha, beta, and release candidate long before final dropped.
 
 The pitch used to be "pip but fast." That undersells what it is now. uv is your Python installer, virtual environment manager, lockfile manager, script runner, and workspace tool in one binary with no system Python requirement. For EventLoop I have a single `pyproject.toml` with optional dependency groups:
 
@@ -139,7 +140,7 @@ test = ["pytest>=7.4.0", "pytest-asyncio>=0.21.0", "pytest-cov>=4.1.0"]
 dev = ["ruff>=0.1.0", "invoke>=2.2.0", "pre-commit>=3.5.0"]
 ```
 
-Spin up: `uv sync --extra app`. Run tests: `uv run pytest`. Add a dependency: `uv add httpx`. No `pip install -e .`, no activation ceremony, no `requirements.txt` drift. The lockfile (`uv.lock`) pins everything deterministically. `uv sync --frozen` in CI installs from the lockfile without re-resolving — reproducible builds in under ten seconds for a 40-package tree including Playwright.
+Spin up: `uv sync --extra app`. Run tests: `uv run pytest`. Add a dependency: `uv add httpx`. No `pip install -e .`, no activation ceremony, no `requirements.txt` drift. The lockfile (`uv.lock`) pins everything deterministically. `uv sync --frozen` in CI installs from the lockfile without re-resolving.
 
 A cold sync of the full dependency tree — 40-odd packages including Playwright — takes under 10 seconds. Transporter beam, not turbolift.
 
@@ -147,7 +148,7 @@ A cold sync of the full dependency tree — 40-odd packages including Playwright
 
 Python 3.15 is the most substantive release since 3.10 added structural pattern matching. Here are the features that actually show up in EventLoop.
 
-<div id="pep-cards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:2rem 0;font-family:'Space Grotesk',sans-serif;"></div>
+<div id="pep-cards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:2rem 0;font-family:'Space Grotesk',sans-serif;"><noscript><ul><li>⚡ <strong>PEP 810 — Lazy Imports</strong>: <code>lazy from foo import bar</code> — deferred loading, zero cost if unused</li><li>🧊 <strong>PEP 814 — frozendict</strong>: Immutable, hashable dicts as a built-in. No more MappingProxyType.</li><li>🏴 <strong>PEP 661 — sentinel</strong>: Named sentinel values with useful reprs. <code>sentinel('MISSING')</code></li><li>☄️ <strong>PEP 799 — Tachyon</strong>: Statistical sampling profiler in stdlib. Zero instrumentation overhead.</li><li>🚀 <strong>PEP 686 — UTF-8 mode</strong>: UTF-8 default everywhere. No more locale surprises.</li><li>📦 <strong>PEP 798 — Unpack in Comprehensions</strong>: <code>[*sublist for sublist in nested]</code> — flatten without itertools.</li></ul></noscript></div>
 <script>
 (function(){
   var peps=[
@@ -203,7 +204,11 @@ lazy from shared.database import AsyncSessionLocal
 # Each module loads only when its name is first referenced
 ```
 
-When your FastAPI lifespan hook is the only place the agent runs, you don't need its dependencies loaded during test collection or scraper subprocess startup. In the scraper, the FastAPI and PydanticAI stacks are never used at all — lazy imports mean they cost zero import time. Both `lazy import foo` and `lazy from foo import bar` work. It's a soft keyword, so existing code named `lazy` doesn't break.
+When your FastAPI lifespan hook is the only place the agent runs, you don't need its dependencies loaded during test collection or scraper subprocess startup. Both `lazy import foo` and `lazy from foo import bar` work. It's a soft keyword, so existing code named `lazy` doesn't break.
+
+One thing the PEP doesn't warn you about loudly enough: `lazy` changes module initialization order, and that will find your latent circular imports. EventLoop had one — `web_search.py` imports `SearchPolicy` from `chatbot.py`, and `chatbot.py` re-exports `EventResult` back from `web_search.py`. It never fired, because an eager `from app.chat.chatbot import ...` in `executor.py` always warmed `sys.modules` first. The moment that line became `lazy from`, the warm-up vanished and test collection died on an `ImportError` from a partially initialized module.
+
+The fix was to move `SearchPolicy` to a third module (`policy.py`) that neither file imports from the other to get. The cycle was always there. Eager imports were hiding it. That's the honest version of "free wins, no code changes" — the wins are free, but `lazy from` is a load-bearing change to *when* your modules run, and the bug it surfaces was yours all along.
 
 ### PEP 814: `frozendict` Built-in
 
@@ -260,9 +265,10 @@ For an async chatbot where I was puzzled about latency between the intent classi
 
 ### JIT: 7–8% on x86-64, 11–12% on AArch64
 
-Per the [official What's New](https://docs.python.org/3.15/whatsnew/3.15.html): the experimental JIT compiler has been significantly upgraded with **7–8% geometric mean performance improvement on x86-64 Linux** over the standard interpreter, and **11–12% speedup on AArch64 macOS** over the tail-calling interpreter. The Railway API service runs on Linux x86-64. The wins in EventLoop live in synchronous CPU-bound work: regex matching in the intent classifier, semantic embedding lookups, neighborhood polygon intersection. Free perf, no code changes.
+Per the [release announcement](https://blog.python.org/2026/10/python-3150-final-is-here): the experimental JIT compiler has been significantly upgraded with **7–8% geometric mean performance improvement on x86-64 Linux** over the standard interpreter, and **11–12% speedup on AArch64 macOS** over the tail-calling interpreter. The Railway API service runs on Linux x86-64. The wins in EventLoop live in synchronous CPU-bound work: regex matching in the intent classifier, semantic embedding lookups, neighborhood polygon intersection. Free perf, no code changes.
 
 <canvas id="jit-chart" width="600" height="240" style="width:100%;max-width:600px;display:block;margin:2rem auto;border-radius:0.75rem;background:#0f172a;border:1px solid #1e293b;"></canvas>
+<noscript><table><caption>Python 3.15 JIT — geometric mean speedup over baseline interpreter</caption><thead><tr><th>Platform</th><th>Speedup</th><th>Baseline</th></tr></thead><tbody><tr><td>x86-64 Linux (Railway API service)</td><td>+7–8%</td><td>vs standard interpreter</td></tr><tr><td>AArch64 macOS (M-series Mac / ARM CI)</td><td>+11–12%</td><td>vs tail-calling interpreter</td></tr></tbody></table></noscript>
 <script>
 (function(){
   var canvas=document.getElementById('jit-chart');
@@ -274,8 +280,8 @@ Per the [official What's New](https://docs.python.org/3.15/whatsnew/3.15.html): 
   var W=600,H=240;
   // Two bars only — baseline is the 0% reference line, not an empty bar
   var bars=[
-    {label:'x86-64 Linux',sub:'(Railway API service)',color:'#059669',lo:7,hi:8},
-    {label:'AArch64 macOS',sub:'(M-series Mac / ARM CI)',color:'#0ea5e9',lo:11,hi:12},
+    {label:'x86-64 Linux',sub:'(Railway API service)',color:'#059669',lo:7,hi:8,baseline:'vs standard interpreter'},
+    {label:'AArch64 macOS',sub:'(M-series Mac / ARM CI)',color:'#0ea5e9',lo:11,hi:12,baseline:'vs tail-calling interpreter'},
   ];
   var maxVal=15,padL=44,padR=24,padT=44,padB=72;
   var barW=(W-padL-padR)/bars.length;
@@ -352,11 +358,11 @@ Per the [official What's New](https://docs.python.org/3.15/whatsnew/3.15.html): 
       ctx.fillStyle='#475569'; ctx.font='9px "Space Grotesk",sans-serif';
       ctx.fillText(b.sub,bx+bw/2,padT+chartH+32);
       ctx.fillStyle=b.color; ctx.font='9px monospace';
-      ctx.fillText('vs standard interpreter',bx+bw/2,padT+chartH+46);
+      ctx.fillText(b.baseline,bx+bw/2,padT+chartH+46);
     });
     // Source
     ctx.fillStyle='#334155'; ctx.font='9px monospace'; ctx.textAlign='center';
-    ctx.fillText('Source: docs.python.org/3.15/whatsnew/3.15.html · discuss.python.org/t/python-3-15-0-final-is-here',W/2,H-8);
+    ctx.fillText('Source: docs.python.org/3.15/whatsnew/3.15.html · blog.python.org',W/2,H-8);
     if(prog<1) requestAnimationFrame(draw);
   }
   if('IntersectionObserver' in window){
@@ -375,9 +381,9 @@ Per the [official What's New](https://docs.python.org/3.15/whatsnew/3.15.html): 
 | Immutable dicts | `MappingProxyType` workaround | `frozendict` built-in, hashable, typed |
 | Sentinel values | `object()` with bad reprs | `sentinel()` built-in, named, inspectable |
 | Default encoding | Platform-dependent, CI surprises | UTF-8 everywhere |
-| Startup time | All imports eager | Lazy imports via `__future__` |
-| Profiling | `cProfile` or third-party | `tachyon` in stdlib |
-| JIT performance | ~0-2% geometric mean | 7-12% geometric mean |
+| Startup time | All imports eager | `lazy import` / `lazy from` soft keyword |
+| Profiling | `cProfile` or third-party | `profiling.sampling` (Tachyon) in stdlib |
+| JIT performance | Marginal | 7-12% geometric mean |
 
 3.14 → 3.15 is less dramatic than 3.9 → 3.10 (pattern matching). But it's a *quality* release. The things it adds are things you've been reaching for and finding absent: immutable dicts, named sentinels, UTF-8 sanity, lazy loading. Not flashy. Correct.
 
@@ -410,7 +416,7 @@ async def web_fallback(ctx: RunContext[SearchPolicy], query: str) -> list[EventR
 
 `SearchPolicy` is a Pydantic model. Tool return types are Pydantic models. The agent validates tool arguments before they run. My editor knows the shape of every input and output. I can test without calling Anthropic (`pydantic_ai.models.test.TestModel` runs the full loop against a fake model). The model is a string I pass in, so switching providers doesn't touch tool definitions.
 
-Add Python 3.15: `frozendict` makes `SearchPolicy`'s neighborhood alias lookup genuinely immutable. Lazy imports mean the Anthropic SDK doesn't load during scraper subprocess runs. The sentinel pattern cleans up the "result missing vs. result None" distinction in `EventResult`. Small wins that compound.
+Add Python 3.15 and the next round of cleanups writes itself: `frozendict` for the neighborhood alias lookup in `neighborhoods.py`, so it's immutable at runtime and not just by convention; `lazy from` on the agent and intent classifier imports in `executor.py`; `sentinel` for the "field not returned vs. returned as null" distinction in `EventResult`. None of these are load-bearing on their own. They're the kind of small wins that compound.
 
 ## The Three-Tier Architecture: Agentic Thinking Made Concrete
 
@@ -421,8 +427,8 @@ User message
     ↓
 [1] Regex fast-path → CHICAGO_EVENTS (zero LLM cost)
     ↓ (if ambiguous)
-[2] Claude Haiku intent classifier (~10x cheaper than Sonnet)
-    → CHICAGO_EVENTS | CHICAGO_INFO | OUT_OF_SCOPE | FAREWELL
+[2] Claude Haiku intent classifier (~30× cheaper per token than Sonnet)
+    → CHICAGO_EVENTS | CHICAGO_INFO | EVENTS_GENERAL | OUT_OF_SCOPE | FAREWELL
     ↓ (if event-related)
 [3] Claude Sonnet via PydanticAI agent
     → search_local_db → search_google_events (fallback when local is thin)
@@ -430,7 +436,17 @@ User message
 
 The Haiku classifier returns a structured `IntentClassification` model — confidence score included. High confidence routes through. Low confidence gets a clarification prompt.
 
-<div id="routing-diagram" style="margin:2rem auto;max-width:560px;"></div>
+<div id="routing-diagram" style="margin:2rem auto;max-width:560px;"><noscript><pre>
+User message
+    ↓
+[1] Regex fast-path → CHICAGO_EVENTS (zero LLM cost)
+    ↓ (if ambiguous)
+[2] Claude Haiku intent classifier (~30× cheaper per token than Sonnet)
+    → CHICAGO_EVENTS | CHICAGO_INFO | EVENTS_GENERAL | OUT_OF_SCOPE | FAREWELL
+    ↓ (if event-related)
+[3] Claude Sonnet via PydanticAI agent
+    → search_local_db → search_google_events (fallback when local is thin)
+</pre></noscript></div>
 <script>
 (function(){
   var container=document.getElementById('routing-diagram');
@@ -487,7 +503,19 @@ The Haiku classifier returns a structured `IntentClassification` model — confi
 })();
 </script>
 
-Building this pipeline is where agentic coding became concrete for me. I directed an AI pair programmer (Cline, running Claude) to build the initial classifier. I reviewed the output. I caught the subtle bugs — the farewell classifier kept marking "anything cheaper?" as a farewell because "appreciate it" scored positive sentiment. Sentiment and intent are not the same thing. The model wrote the code; I did the thinking.
+Building this pipeline is where agentic coding became concrete for me. I directed an AI pair programmer (Cline, running Claude) to build the initial classifier. I reviewed the output. I caught the subtle bugs — the farewell classifier kept marking "anything cheaper?" as a farewell because "appreciate it" scored positive sentiment. Sentiment and intent are not the same thing.
+
+The docstring in `intent_classifier.py` now says it plainly:
+
+```
+"👍"                                positive  -> farewell
+"no worries, I'll figure it out"    neutral   -> farewell
+"cool cool cool"                    positive  -> farewell
+"appreciate it - anything cheaper?" positive  -> NOT farewell
+"ugh, nothing good on then?"        negative  -> NOT farewell
+```
+
+Two positives on opposite sides and a negative that's still a request. The model wrote the code; I did the thinking.
 
 That's the skill shift from my first post: less syntax, more strategy.
 
@@ -502,17 +530,23 @@ FROM python:3.15.0rc3-slim
 # (python:3.15-slim once Docker Hub publishes the final tag)
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    libnss3 libatk1.0-0 libcups2 libdrm2 libxkbcommon0 \
-    libgbm1 libpango-1.0-0 libcairo2 libasound2 ca-certificates \
+    gcc libc6-dev \
+    libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 \
+    libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 \
+    libpango-1.0-0 libcairo2 libasound2t64 libatspi2.0-0 ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --no-cache-dir uv==0.12.24
 COPY pyproject.toml uv.lock ./
-RUN uv sync --frozen --extra parser --extra app --no-dev
+# The scraper only needs the `parser` extra — `app` pulls in uvicorn[standard]
+# which requires gcc to build httptools from source (no cp315 wheel yet).
+RUN uv sync --frozen --extra parser --no-dev --no-install-project
 RUN uv run playwright install chromium
 ```
 
 One Python version. One lockfile. No subprocess boundary. No "which environment is this running in?" when a bug appears at 2am.
+
+The extras story is sharpest here: `--extra parser` excludes the entire FastAPI and PydanticAI stacks from the scraper image. They're not installed at all — so they cost zero import time, not just lazy-deferred time. uv's dependency groups do the work before the process even starts.
 
 ## Zero Ruff Errors, Every Suppression Documented
 
@@ -535,7 +569,24 @@ Three services, one Railway project, one PostgreSQL database — 90 neighborhood
 - **`frontend`** — nginx, `rootDirectory=frontend`. Proxies `/api/*` to the backend via `envsubst` at container start — `${API_URL}` gets substituted into the nginx config at runtime, so no rebuild needed when the backend URL changes
 - **`scraper`** — Python 3.15 + Playwright, cron `0 */6 * * *`, separate `Dockerfile.scraper` pointed at `railway.scraper.toml`
 
-<div id="arch-diagram" style="margin:2rem auto;max-width:600px;"></div>
+The whole thing is live at **[eventloop.city](https://eventloop.city)** — custom domain on Porkbun, ALIAS `@` → Railway, SSL auto-provisioned by Let's Encrypt through Railway. Go find something to do in Chicago.
+
+<div id="arch-diagram" style="margin:2rem auto;max-width:600px;"><noscript><pre>
+                    EventLoop on Railway
+
+  ┌─────────────┐   /api/* proxy   ┌──────────────────┐     ┌───────────────────────┐
+  │  frontend   │ ────────────────▶ │       api        │     │       scraper         │
+  │ nginx·Vite  │                  │ FastAPI·Python3.15│     │ Playwright·cron 0*/6  │
+  └─────────────┘                  └────────┬─────────┘     └──────────┬────────────┘
+                                            │                           │
+                                            └───────────┬───────────────┘
+                                                        ▼
+                                            ┌───────────────────────┐
+                                            │       PostgreSQL       │
+                                            │ Chicago events · 90   │
+                                            │ neighborhoods · ~$12/mo│
+                                            └───────────────────────┘
+</pre></noscript></div>
 <script>
 (function(){
   var container=document.getElementById('arch-diagram');
@@ -572,8 +623,8 @@ Three services, one Railway project, one PostgreSQL database — 90 neighborhood
   svg+='<text x="'+W/2+'" y="'+(dbY+36)+'" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700" fill="#f1f5f9">PostgreSQL</text>';
   svg+='<text x="'+W/2+'" y="'+(dbY+50)+'" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#b45309">Chicago events · 90 neighborhoods · scraper every 6h</text>';
 
-  // Arrows: services → postgres
-  services.forEach(function(s){
+  // Arrows: api + scraper → postgres (frontend/nginx does not speak Postgres)
+  services.filter(function(s){return s.label!=='frontend';}).forEach(function(s){
     var x1=s.x, y1=sY+sH;
     var x2=W/2, y2=dbY;
     svg+='<path d="M'+x1+','+y1+' C'+x1+','+(y1+40)+' '+x2+','+(y2-40)+' '+x2+','+y2+'" fill="none" stroke="'+s.color+'" stroke-width="1.5" stroke-dasharray="5 3" opacity="0.7" marker-end="url(#db-arr)"/>';
@@ -616,9 +667,9 @@ And after migrating from local SQLite to Railway Postgres: Postgres sequences. A
 
 Everything else (build config, healthcheck path, cron schedule, restart policy) lives in committed `railway.toml` files alongside the Dockerfiles. Total cost: ~$10–12/month on the Hobby plan. The Anthropic API bill is separate and scales with actual usage.
 
-## Stardate 2026.283: Ship It
+## Stardate 2026.282: Ship It
 
-Python 3.15.0 final [dropped yesterday](https://discuss.python.org/t/python-3-15-0-final-is-here) — October 9th, 2026 — from release managers Hugo van Kemenade, Ned Deily, and Steve Dower. 5,643 commits from **1,012 contributors**. As a former PSF Chairperson, I never get tired of reading that number. Open source at scale.
+Python 3.15.0 final [dropped today](https://blog.python.org/2026/10/python-3150-final-is-here) — October 9th, 2026 — from release manager Hugo van Kemenade, with Ned Deily and Steve Dower on the release team. 5,643 commits from **1,012 contributors**. As a former PSF Chairperson, I never get tired of reading that number. Open source at scale.
 
 To celebrate, Barry Warsaw shipped [`whatsnewt`](https://pypi.org/project/whatsnewt/) — a TUI text adventure through What's New in Python 3.15. Eighteen puzzles, each one a real 3.15 feature you have to actually write and run code to solve. Type checking verified by `pyrefly`. Easter eggs. Run it:
 
@@ -672,8 +723,8 @@ Live long, Python & prosper. 🖖
   g('%c  NCC-1701-D  ','background:#FF9900;color:#000;font-weight:bold;font-size:14px;padding:4px 12px;border-radius:3px;font-family:monospace;letter-spacing:2px');
   g('%c'+NCC,'color:#9999FF;font-family:monospace;font-size:11px;line-height:1.5');
   g('%c'+q,'color:#FF9900;font-family:monospace;font-size:12px;font-style:italic;padding:8px 0');
-  g('%c  STARDATE 2026.283 · SECTOR CHICAGO-ILL · PYTHON 3.15 ONLINE  ','color:#44CC44;font-family:monospace;font-size:10px;letter-spacing:1px');
-  g('%c  github.com/lorenanicole/event-loop  ','color:#475569;font-family:monospace;font-size:10px');
+  g('%c  STARDATE 2026.282 · SECTOR CHICAGO-ILL · PYTHON 3.15 ONLINE  ','color:#44CC44;font-family:monospace;font-size:10px;letter-spacing:1px');
+  g('%c  eventloop.city · github.com/lorenanicole/event-loop  ','color:#475569;font-family:monospace;font-size:10px');
   g('%c','font-size:1px');
 })();
 </script>
@@ -699,7 +750,7 @@ Live long, Python & prosper. 🖖
     overlay.style.cssText='position:fixed;top:0;left:0;width:100%;height:100%;z-index:10000;pointer-events:none;display:flex;flex-direction:column;align-items:center;justify-content:center;';
     var qEl=document.createElement('div');
     qEl.style.cssText='font-family:monospace;font-size:clamp(13px,2vw,20px);color:#FF9900;text-align:center;padding:2rem;max-width:560px;opacity:0;transition:opacity 0.6s;text-shadow:0 0 20px #FF9900;';
-    qEl.innerHTML='🖖 <em>Live long, Python &amp; prosper.</em> 🖖<br><span style="font-size:0.7em;color:#9999FF;margin-top:0.5rem;display:block">LLAP · NCC-1701-D · STARDATE 2026.283</span>';
+    qEl.innerHTML='🖖 <em>Live long, Python &amp; prosper.</em> 🖖<br><span style="font-size:0.7em;color:#9999FF;margin-top:0.5rem;display:block">LLAP · NCC-1701-D · STARDATE 2026.282</span>';
     overlay.appendChild(qEl);document.body.appendChild(overlay);
     var stars=[];
     for(var i=0;i<220;i++){
@@ -734,4 +785,4 @@ Live long, Python & prosper. 🖖
 })();
 </script>
 
-*EventLoop is at [github.com/lorenanicole/event-loop](https://github.com/lorenanicole/event-loop). Python 3.15.0 final released 2026-10-09 — [announcement](https://discuss.python.org/t/python-3-15-0-final-is-here), [download](https://python.org/downloads/release/python-3150/). All PEP numbers and feature descriptions reference the [official Python 3.15 What's New](https://docs.python.org/3.15/whatsnew/3.15.html). uv 0.12.24 is the current stable release as of this writing.*
+*EventLoop is live at [eventloop.city](https://eventloop.city) — source at [github.com/lorenanicole/event-loop](https://github.com/lorenanicole/event-loop). Python 3.15.0 final released 2026-10-09 — [announcement](https://blog.python.org/2026/10/python-3150-final-is-here), [download](https://python.org/downloads/release/python-3150/). All PEP numbers and feature descriptions reference the [official Python 3.15 What's New](https://docs.python.org/3.15/whatsnew/3.15.html). uv 0.12.24 is the current stable release as of this writing.*

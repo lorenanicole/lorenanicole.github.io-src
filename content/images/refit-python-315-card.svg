@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#0a0a0f"/>
+
+  <!-- LCARS left elbow -->
+  <rect x="0" y="0" width="140" height="140" rx="70" fill="#FF9900"/>
+  <rect x="70" y="0" width="70" height="140" fill="#FF9900"/>
+  <rect x="0" y="70" width="140" height="70" fill="#FF9900"/>
+  <rect x="16" y="16" width="116" height="116" rx="54" fill="#0a0a0f"/>
+  <rect x="70" y="16" width="70" height="116" fill="#0a0a0f"/>
+  <rect x="16" y="70" width="116" height="70" fill="#0a0a0f"/>
+  <!-- Left spine -->
+  <rect x="0" y="140" width="40" height="380" fill="#FF9900"/>
+  <rect x="0" y="530" width="140" height="40" fill="#9999FF"/>
+  <rect x="0" y="578" width="140" height="28" fill="#CC4444"/>
+  <rect x="0" y="614" width="140" height="16" fill="#FF9900"/>
+
+  <!-- Right spine -->
+  <rect x="1160" y="140" width="40" height="380" fill="#9999FF"/>
+  <rect x="1060" y="590" width="140" height="40" fill="#9999FF"/>
+  <rect x="1060" y="0" width="40" height="140" fill="#FF9900"/>
+  <rect x="1060" y="0" width="140" height="40" fill="#FF9900"/>
+
+  <!-- Top title bar -->
+  <rect x="156" y="0" width="888" height="40" fill="#FF9900"/>
+  <rect x="156" y="46" width="888" height="20" fill="#9999FF" opacity="0.7"/>
+  <text x="600" y="29" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#0a0a0f" letter-spacing="3">STARFLEET MISSION BRIEF — SECTOR CHICAGO-ILL</text>
+
+  <!-- STARDATE -->
+  <text x="172" y="90" font-family="monospace" font-size="16" fill="#FF9900" letter-spacing="2">STARDATE 2026.282</text>
+  <text x="1044" y="90" text-anchor="end" font-family="monospace" font-size="16" fill="#9999FF" letter-spacing="2">CLASSIFICATION: OPEN SOURCE</text>
+
+  <!-- Main title -->
+  <text x="600" y="200" text-anchor="middle" font-family="monospace" font-size="52" font-weight="bold" fill="#F1F5F9" letter-spacing="1">EventLoop</text>
+  <text x="600" y="256" text-anchor="middle" font-family="monospace" font-size="22" fill="#FF9900" letter-spacing="4">THE REFIT — PYTHON 3.15</text>
+
+  <!-- Divider -->
+  <line x1="172" y1="278" x2="1044" y2="278" stroke="#475569" stroke-width="1" opacity="0.6"/>
+
+  <!-- Stats grid -->
+  <text x="220" y="322" font-family="monospace" font-size="15" fill="#FF9900" letter-spacing="1">PROPULSION</text>
+  <text x="220" y="346" font-family="monospace" font-size="15" fill="#F1F5F9">FastAPI · PydanticAI · asyncpg</text>
+
+  <text x="220" y="390" font-family="monospace" font-size="15" fill="#FF9900" letter-spacing="1">INTELLIGENCE</text>
+  <text x="220" y="414" font-family="monospace" font-size="15" fill="#F1F5F9">Claude Sonnet 5.5 via PydanticAI</text>
+
+  <text x="220" y="458" font-family="monospace" font-size="15" fill="#FF9900" letter-spacing="1">REGISTRY</text>
+  <text x="220" y="482" font-family="monospace" font-size="15" fill="#F1F5F9">Python 3.15 · uv 0.12.24 · Railway</text>
+
+  <text x="680" y="322" font-family="monospace" font-size="15" fill="#FF9900" letter-spacing="1">FEATURES</text>
+  <text x="680" y="346" font-family="monospace" font-size="15" fill="#F1F5F9">frozendict · sentinel · lazy from</text>
+
+  <text x="680" y="390" font-family="monospace" font-size="15" fill="#FF9900" letter-spacing="1">DATABASE</text>
+  <text x="680" y="414" font-family="monospace" font-size="15" fill="#F1F5F9">90 neighbourhoods · PostgreSQL</text>
+
+  <text x="680" y="458" font-family="monospace" font-size="15" fill="#FF9900" letter-spacing="1">STATUS</text>
+  <text x="680" y="482" font-family="monospace" font-size="15" fill="#44CC44">● OPERATIONAL · eventloop.city</text>
+
+  <!-- Bottom divider -->
+  <line x1="172" y1="510" x2="1044" y2="510" stroke="#475569" stroke-width="1" opacity="0.6"/>
+  <text x="600" y="546" text-anchor="middle" font-family="monospace" font-size="14" fill="#475569">lorenamesa.com · github.com/lorenanicole/event-loop</text>
+</svg>

@@ -48,6 +48,9 @@ SOCIAL = (('Email', 'mailto:me@lorenamesa.com'),
 	  	  ('LinkedIn', 'https://www.linkedin.com/in/lorenamesa'),
 	  	  ('Substack', 'https://substack.com/@lorenamesa'))
 
+# Static files
+STATIC_PATHS = ['images']
+
 # Plugins
 PLUGINS = []
 PLUGIN_PATHS = []

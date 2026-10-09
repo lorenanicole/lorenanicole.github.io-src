@@ -1,3 +1,43 @@
+<!-- Organization Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Lorena Mesa",
+  "url": "{{ SITEURL }}",
+  "logo": "{{ USER_LOGO_URL }}",
+  "description": "Backend engineer and technical leader specializing in Python, AI/LLM integration, and open source community building.",
+  "sameAs": [
+    "https://github.com/lorenanicole",
+    "https://www.linkedin.com/in/lorenamesa",
+    "https://mastodon.social/@Lorenanicole",
+    "https://substack.com/@lorenamesa"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Lorena Mesa"
+  },
+  "knowsAbout": [
+    "Python Programming",
+    "Backend Engineering",
+    "AI and Large Language Models",
+    "Open Source Development",
+    "Technical Leadership",
+    "Community Building",
+    "Software Architecture",
+    "Data Ethics"
+  ],
+  "expertise": [
+    "Full Stack Development",
+    "Python Programming",
+    "AI and LLM Integration",
+    "Technical Leadership",
+    "Open Source Community Building",
+    "Systems Architecture"
+  ]
+}
+</script>
+
 <!-- Person Schema (author/site owner) -->
 <script type="application/ld+json">
 {
@@ -8,9 +48,10 @@
   "email": "me@lorenamesa.com",
   "image": "{{ USER_LOGO_URL }}",
   "sameAs": [
-    "https://twitter.com/loooorenanicole",
     "https://github.com/lorenanicole",
-    "https://www.linkedin.com/in/lorenamesa"
+    "https://www.linkedin.com/in/lorenamesa",
+    "https://mastodon.social/@Lorenanicole",
+    "https://substack.com/@lorenamesa"
   ],
   "jobTitle": "Backend Engineer & Technical Leader",
   "knowsAbout": [
@@ -21,7 +62,11 @@
     "Technical Leadership",
     "Community Building"
   ],
-  "description": "Backend engineer passionate about Python, AI integration, and building inclusive open source communities."
+  "description": "Backend engineer passionate about Python, AI integration, and building inclusive open source communities. PSF Fellow and Ex-Chairperson, PyLadies Chicago founder, Claude Chicago Ambassador.",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Lorena Mesa"
+  }
 }
 </script>
 
@@ -32,19 +77,32 @@
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "{{ article.title }}",
-  "description": "{{ article.summary or article.title }}",
+  "description": "{{ (article.summary or article.title)|striptags }}",
   "image": "{{ USER_LOGO_URL }}",
   "datePublished": "{{ article.date.isoformat() }}",
   {% if article.modified %}"dateModified": "{{ article.modified.isoformat() }}",{% endif %}
   "author": {
     "@type": "Person",
     "name": "{{ article.author|default(AUTHOR) }}",
-    "url": "{{ SITEURL }}"
+    "url": "{{ SITEURL }}",
+    "image": "{{ USER_LOGO_URL }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ SITENAME }}",
+    "url": "{{ SITEURL }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ USER_LOGO_URL }}"
+    }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "{{ SITEURL }}/{{ article.url }}"
   }
+  {% if article.tags %},
+  "keywords": "{{ article.tags|map(attribute='name')|join(', ') }}"
+  {% endif %}
 }
 </script>
 {% endif %}

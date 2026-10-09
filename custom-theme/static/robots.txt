@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /feeds/
+Disallow: /category/
+Disallow: /tag/
+
+Sitemap: https://lorenamesa.com/sitemap.xml

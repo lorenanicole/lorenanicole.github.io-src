@@ -4,18 +4,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="{{ AUTHOR }}">
-  <meta name="description" content="{% block description %}{{ SITENAME }} - Technical leadership in Python, AI, and open source.{% endblock %}">
+  {% set _desc %}{% block description %}{{ SITENAME }} - Technical leadership in Python, AI, and open source.{% endblock %}{% endset %}
+  <meta name="description" content="{{ _desc|striptags|trim }}">
 
   <!-- Open Graph -->
   <meta property="og:title" content="{% block og_title %}{{ SITENAME }}{% endblock %}">
-  <meta property="og:description" content="{% block og_description %}{{ self.description() }}{% endblock %}">
+  {% set _ogdesc %}{% block og_description %}{{ _desc|striptags|trim }}{% endblock %}{% endset %}
+  <meta property="og:description" content="{{ _ogdesc|striptags|trim }}">
   <meta property="og:type" content="{% block og_type %}website{% endblock %}">
   <meta property="og:url" content="{{ SITEURL }}{% block og_url %}{% endblock %}">
+  <meta property="og:image" content="{{ SITEURL }}{% block og_image %}/images/refit-python-315-card.png{% endblock %}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ SITEURL }}{% block canonical_url %}{% endblock %}">
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="{% block twitter_card %}summary_large_image{% endblock %}">
   <meta name="twitter:creator" content="@loooorenanicole">
   <meta name="twitter:title" content="{% block twitter_title %}{{ SITENAME }}{% endblock %}">
+  <meta name="twitter:description" content="{{ _ogdesc|striptags|trim }}">
+  <meta name="twitter:image" content="{{ SITEURL }}{% block twitter_image %}/images/refit-python-315-card.png{% endblock %}">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
@@ -79,7 +89,28 @@
 <body class="bg-black text-slate-100 antialiased">
   <header class="border-b border-slate-800 py-8 mb-16">
     <div class="max-w-4xl mx-auto px-8">
-      <div class="flex justify-between items-end gap-12">
+      <!-- Mobile/Tablet: Stack vertically -->
+      <div class="block lg:hidden">
+        <div class="flex items-end gap-6 mb-8">
+          {% if USER_LOGO_URL %}
+          <img src="{{ USER_LOGO_URL }}" alt="{{ AUTHOR }}" class="w-16 h-16 rounded-full border-2 border-slate-700 flex-shrink-0">
+          {% endif %}
+          <div class="pb-1">
+            <h1 class="text-2xl font-bold mb-0.5">
+              <a href="{{ SITEURL }}/" class="text-slate-100 hover:text-accent">{{ SITENAME }}</a>
+            </h1>
+            <p class="text-xs text-slate-400 leading-tight">{{ TAGLINE }}</p>
+          </div>
+        </div>
+        <nav class="flex gap-4 flex-wrap" aria-label="Main navigation">
+          {% for name, link in LINKS %}
+          <a href="{{ link }}" class="text-xs font-medium text-slate-400 hover:text-accent transition-colors">{{ name }}</a>
+          {% endfor %}
+        </nav>
+      </div>
+
+      <!-- Desktop: Side-by-side -->
+      <div class="hidden lg:flex justify-between items-end gap-12">
         <!-- Branding -->
         <div class="flex items-end gap-6 flex-1">
           {% if USER_LOGO_URL %}
