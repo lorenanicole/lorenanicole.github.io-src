@@ -50,10 +50,11 @@
   <text x="680" y="346" font-family="monospace" font-size="15" fill="#F1F5F9">frozendict · sentinel · lazy from</text>
 
   <text x="680" y="390" font-family="monospace" font-size="15" fill="#FF9900" letter-spacing="1">DATABASE</text>
-  <text x="680" y="414" font-family="monospace" font-size="15" fill="#F1F5F9">90 neighbourhoods · PostgreSQL</text>
+  <text x="680" y="414" font-family="monospace" font-size="15" fill="#F1F5F9">90 neighborhoods · PostgreSQL</text>
 
   <text x="680" y="458" font-family="monospace" font-size="15" fill="#FF9900" letter-spacing="1">STATUS</text>
-  <text x="680" y="482" font-family="monospace" font-size="15" fill="#44CC44">● OPERATIONAL · eventloop.city</text>
+  <circle cx="681" cy="477" r="5" fill="#44CC44"/>
+  <text x="694" y="482" font-family="monospace" font-size="15" fill="#44CC44">OPERATIONAL · eventloop.city</text>
 
   <!-- Bottom divider -->
   <line x1="172" y1="510" x2="1044" y2="510" stroke="#475569" stroke-width="1" opacity="0.6"/>

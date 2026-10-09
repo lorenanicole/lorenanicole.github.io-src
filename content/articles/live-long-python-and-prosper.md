@@ -208,7 +208,7 @@ When your FastAPI lifespan hook is the only place the agent runs, you don't need
 
 One thing the PEP doesn't warn you about loudly enough: `lazy` changes module initialization order, and that will find your latent circular imports. EventLoop had one — `web_search.py` imports `SearchPolicy` from `chatbot.py`, and `chatbot.py` re-exports `EventResult` back from `web_search.py`. It never fired, because an eager `from app.chat.chatbot import ...` in `executor.py` always warmed `sys.modules` first. The moment that line became `lazy from`, the warm-up vanished and test collection died on an `ImportError` from a partially initialized module.
 
-The fix was to move `SearchPolicy` to a third module (`policy.py`) that neither file imports from the other to get. The cycle was always there. Eager imports were hiding it. That's the honest version of "free wins, no code changes" — the wins are free, but `lazy from` is a load-bearing change to *when* your modules run, and the bug it surfaces was yours all along.
+The fix was to move `SearchPolicy` into a third module, `policy.py`, that both files import from — so neither needs the other. The cycle was always there. Eager imports were hiding it. That's the honest version of "free wins, no code changes" — the wins are free, but `lazy from` is a load-bearing change to *when* your modules run, and the bug it surfaces was yours all along.
 
 ### PEP 814: `frozendict` Built-in
 
