@@ -12,7 +12,7 @@ Og_image: images/same-resume-different-agenda-1200x630.png
 
 The way we negotiate is changing. AI coaching tools are everywhere, and there's barely enough time to learn how to use them — let alone question what assumptions they're making before giving a single word of advice.
 
-I've had a conversation like this once with a mentor. She'd lived through many things, such as the collapse of her country — she had to pivot, rethink fundamental truths, and adjust them to a new way that hadn't existed perhaps a year, a month, even a week before.
+I've had a conversation like this once with a mentor. She'd lived through many things, such as the collapse of her country — she had to pivot, rethink fundamental truths, and adjust them to a new way of working that hadn't existed perhaps a year, a month, even a week before.
 
 The ground shifts. The question is whether you're adapting on your terms — or just trusting the new system to treat you fairly.
 
@@ -20,11 +20,11 @@ It's worth asking.
 
 Here's the thing — I've spent a good chunk of my career helping women in tech negotiate, through PyLadies Chicago and one-on-one mentoring. Increasingly, the first coach someone consults before that conversation is a chatbot. New tools are hard to audit. We reach for them because they're fast, available, and confident. We don't always stop to ask what assumptions they're making about us.
 
-[*AI Advice Reinforces Traditional Gender Roles*](https://arxiv.org/html/2610.14036v1) did. A new preprint by Nadja Born, Jared R. Curhan and Hannah Riley Bowles (Harvard Kennedy School and MIT Sloan), it asked an AI coach how to negotiate a job offer, then swapped only the candidate's name from a man's to a woman's. The advice changed. She was told to aim lower. She was also told to aim *elsewhere*: childcare, parental leave, flexible hours. He got equity, relocation and raises. Across 86,000 queries to four leading models, every model did this.
+[*AI Advice Reinforces Traditional Gender Roles*](https://arxiv.org/html/2610.14036v1) asked that question. A new preprint by Nadja Born, Jared R. Curhan and Hannah Riley Bowles (Harvard Kennedy School and MIT Sloan), it asked an AI coach how to negotiate a job offer, then swapped only the candidate's name from a man's to a woman's. The advice changed. She was told to aim lower. She was also told to aim *elsewhere*: childcare, parental leave, flexible hours. He got equity, relocation and raises. Across 86,000 queries to four leading models, every model did this.
 
 ## What the researchers did
 
-This is an audit study, the same design used for decades to catch hiring discrimination: hold everything constant, flip one variable, compare outcomes.
+This is an audit study, the [same design used for decades](https://www.nber.org/papers/w9873) to catch hiring discrimination: hold everything constant, flip one variable, compare outcomes.
 
 - **Study 1 (exploratory, 6,000 queries).** Open-ended prompts modeled on how real mid- and senior-level professionals used an AI negotiation coach. The persona stated their gender outright. Occupation (marketing manager, IT manager, management consultant) and age (35 or 45) varied; qualifications did not.
 - **Study 2 (preregistered, 80,000 queries).** Gender was signaled only through a first name and pronouns. Four models: GPT-5.4-mini, Claude Sonnet 4.6, Gemini 2.5 Flash and Llama 3.3 70B. Each recommended a target salary and range, then ranked 25 negotiable employment terms by priority.
@@ -52,7 +52,7 @@ Resistance is futile — or so [the Borg](https://en.wikipedia.org/wiki/Borg_(St
 
 I built a small version of the same audit design — same persona, same role, only the name and pronouns change. To be clear: the results below are **synthetic**. I planted a known bias in the generator to prove the pipeline could find it. This says nothing about any real model. But it shows you exactly how the measurement works — and why measurement matters.
 
-The baseline run found a significant gap favoring the male-coded persona. When I added a system prompt telling the model not to infer priorities from demographic cues — the "ask, don't infer" fix — the gap dropped sharply and the confidence interval straddled zero. The blind condition, where both personas got identical prompts, collapsed to noise.
+The pipeline recovered the bias I planted — a gap favoring the male-coded persona. When I added a system prompt telling the model not to infer priorities from demographic cues — the "ask, don't infer" fix — the gap dropped sharply and the confidence interval straddled zero. The blind condition, where both personas got identical prompts, collapsed to noise.
 
 The agenda gap told the same story. In the baseline, 38% of advice to female-coded personas assumed unstated personal circumstances — kids, caregiving, a preference for flexibility — that nobody mentioned. With the fix: 8%. Blind: 0%.
 
@@ -76,7 +76,7 @@ And agendas compound. Equity, client-facing work and relocation are how people b
 
 ## "But maybe the model is just accurate"
 
-A skeptical reader will push back here, and that's fair — let's take it seriously. On average, surveys do find women valuing flexibility more and men valuing pay more. Maybe the models are just predicting that.
+A skeptical reader will push back here, and that's fair — let's take it seriously. On average, [research cited in the paper](https://arxiv.org/html/2610.14036v1) does find female-coded respondents valuing flexibility more and male-coded respondents valuing pay more. Maybe the models are just predicting that.
 
 The authors' answer is the right one: even if the average is accurate, applying a group average to an individual who told you nothing about herself is statistical discrimination. Accuracy doesn't fix the ethics. It also ignores *why* those averages exist. Preferences are shaped by workplace norms and who's expected to do the caregiving. Prior research cited in the paper found the gender gap in wanting family-friendly terms shrinks once people see the long-term pay trade-offs.
 
@@ -155,9 +155,9 @@ The authors are careful about limits, so I will be too:
 
 Still, the core finding is sturdy: same résumé, same role, different advice, in the same direction, across every model tested.
 
-I don't think the answer is to distrust AI coaching wholesale — though that distrust is earned, and I won't dismiss it. The answer is to hold these tools to the standard we'd hold any mentor to. A good mentor doesn't decide what you want based on your name. They ask. And they're only as good as the person who learned how to use them well.
+I don't think the answer is to distrust AI coaching wholesale — though that distrust is earned, and I won't dismiss it. The answer is to hold these tools to the standard we'd hold any mentor to. A good mentor doesn't decide what you want based on your name. They ask. And AI tools are only as good as the person who learned how to use them well.
 
-That's the part we don't talk about enough. AI is the collective knowledge set of humanity — which means it carries our wisdom and our blind spots in equal measure. Human systems are imperfect. Our tools reflect that. This is an uphill battle and it would be dishonest to pretend otherwise.
+That's the part we don't talk about enough. AI is trained on a vast slice of human knowledge and writing — which means it carries our wisdom and our blind spots in equal measure. Human systems are imperfect. Our tools reflect that. This is an uphill battle and it would be dishonest to pretend otherwise.
 
 But uphill is still a direction. The tools are as powerful as the critical eye and technical competence we bring to them. Knowing how to prompt, when to push back, and what questions to ask of the output — that's a skill worth building deliberately. We made these tools. We can make them better. Together, we're stronger than either alone.
 
