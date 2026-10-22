@@ -3,3 +3,13 @@
 __pycache__/
 *.pyc
 blog_env/
+
+# Agent handoff files (local only)
+CLAUDE.md
+HANDOFF*.md
+.claude/
+
+# Environment files — never commit real keys
+.env
+**/.env
+*.env

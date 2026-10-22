@@ -136,16 +136,8 @@ def main():
         print(f"✅ Image:   content/images/{img.name}")
 
     print(f"""
-Next steps:
-  # Preview
-  pelican content -s pelicanconf_dev.py -o output
-
-  # Production build + deploy
-  pelican content -s pelicanconf.py -o output
-  cd output
-  git add . && git commit -m "Add post: {meta.get('title','')}" && git push origin HEAD:master
-  cd ..
-  git add output && git commit -m "Update published output" && git push origin master
+✅ Done. Preview at http://localhost:8001 after running:
+  pelican -r -l -s pelicanconf_dev.py -o output -p 8001
 """)
 
 
