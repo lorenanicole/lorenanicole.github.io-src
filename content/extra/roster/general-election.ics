@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//lorenamesa.com//duty-roster//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:general-election@lorenamesa.com
+DTSTAMP:20261107T000000Z
+DTSTART;VALUE=DATE:20281107
+DTEND;VALUE=DATE:20281108
+SUMMARY:General Election
+DESCRIPTION:President\, Congress\, state office\, and judicial retention. D
+ etails: https://chicagoelections.gov/
+URL:https://chicagoelections.gov/
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

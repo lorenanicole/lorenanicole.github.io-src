@@ -49,7 +49,10 @@ SOCIAL = (('Email', 'mailto:me@lorenamesa.com'),
 	  	  ('Substack', 'https://substack.com/@lorenamesa'))
 
 # Static files
-STATIC_PATHS = ['images']
+STATIC_PATHS = ['images', 'extra']
+# Treat .html under content/ as static files, not articles, so hand-built pages
+# like the Duty Roster get copied through instead of parsed for front matter.
+READERS = {'html': None}
 
 # Plugins
 PLUGINS = []

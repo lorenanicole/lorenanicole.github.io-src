@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Duty Roster</title>
+<style>
+  :root { --ink: #16161d; --paper: #fdfdfb; --rule: #d7d7d0; --quiet: #5a5a52; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink: #e8e8e3; --paper: #16161d; --rule: #3a3a42; --quiet: #a0a098; }
+  }
+  body { margin: 0 auto; max-width: 56rem; padding: 2rem 1rem;
+         background: var(--paper); color: var(--ink);
+         font: 1rem/1.6 ui-serif, Georgia, "Times New Roman", serif; }
+  h1 { font-size: 1.9rem; margin-bottom: .25rem; }
+  .standfirst { color: var(--quiet); margin-top: 0; }
+  .wrap { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; margin: 1.5rem 0; }
+  caption { text-align: left; font-weight: 700; padding-bottom: .5rem; }
+  th, td { border-bottom: 1px solid var(--rule); padding: .6rem .5rem;
+            text-align: left; vertical-align: top; }
+  th[scope="row"] { font-weight: 600; }
+  small { color: var(--quiet); }
+  .make-it-so, .find { display: inline-block; border: 2px solid var(--ink); border-radius: 999px;
+                 padding: .3rem .9rem; text-decoration: none; color: var(--ink);
+                 font: 600 .85rem/1 ui-sans-serif, system-ui, sans-serif; white-space: nowrap; }
+  .find { border-style: dashed; }
+  .make-it-so:hover, .make-it-so:focus, .find:hover, .find:focus { background: var(--ink); color: var(--paper); }
+  footer { color: var(--quiet); font-size: .85rem; border-top: 1px solid var(--rule);
+            margin-top: 2rem; padding-top: 1rem; }
+  footer a { color: inherit; }
+  .pdf { font: 600 .9rem/1.4 ui-sans-serif, system-ui, sans-serif; }
+  .print-only { display: none; }
+  .pdf a { color: inherit; }
+  @media print {
+    :root { --ink: #000; --paper: #fff; --rule: #999; --quiet: #333; }
+    body { max-width: none; padding: 0; font-size: 9.5pt; line-height: 1.4; }
+    .countdown, .make-it-so, .pdf, .screen-only { display: none; }
+    .print-only { display: inline; word-break: break-all; }
+    p.print-only { display: block; }
+    .wrap { break-inside: avoid; overflow: visible; }
+    footer { font-size: 8pt; margin-top: 1rem; }
+    footer li { margin: 0; }
+    .find { border: none; padding: 0; font: inherit; white-space: normal; }
+    .find::after { content: ": " attr(href); word-break: break-all; }
+    tr { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<h1>The Duty Roster</h1>
+<p class="standfirst print-only">Every chance to show up in Chicago between now and 2028, with the turnout the last
+comparable election drew. Calendar files for every date: lorenamesa.com/extra/roster/</p>
+<p class="standfirst screen-only">Every chance to show up in Chicago between now and 2028, with the turnout
+the last comparable election drew. "Make it so" downloads a calendar file. "Find yours" goes to
+the official page, because some schedules belong to your district, school or ward.</p>
+<p class="pdf"><a href="duty-roster.pdf" download>Download the roster as a PDF</a> to print or share.</p>
+
+<div class="wrap">
+<table>
+  <caption>Ballots</caption>
+  <thead>
+    <tr><th scope="col">What</th><th scope="col">When</th><th scope="col" class="countdown">From today</th>
+        <th scope="col">Governs</th><th scope="col">Last turnout</th><th scope="col"></th></tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th scope="row">Chicago Municipal General</th>
+        <td>February 23, 2027</td>
+        <td class="countdown">108 days</td>
+        <td>Mayor, City Clerk, City Treasurer, all 50 alderpersons, and the Police District Councils in all 22 police districts</td>
+        <td>35.85%<br><small>February 28, 2023 municipal</small></td>
+        <td><a class="make-it-so" download href="chicago-municipal-general.ics">Make it so</a><span class="print-only">https://chicagoelections.gov/</span></td>
+      </tr>
+      <tr>
+        <th scope="row">Chicago Municipal Runoff</th>
+        <td>April 6, 2027</td>
+        <td class="countdown">150 days</td>
+        <td>Any city office where no candidate won a majority in February</td>
+        <td>38.67%<br><small>April 4, 2023 runoff</small></td>
+        <td><a class="make-it-so" download href="chicago-municipal-runoff.ics">Make it so</a><span class="print-only">https://chicagoelections.gov/</span></td>
+      </tr>
+      <tr>
+        <th scope="row">Local School Council elections</th>
+        <td>Spring 2028 (CPS sets the date)</td>
+        <td class="countdown">—</td>
+        <td>Parent, community and staff seats on the council at every CPS school</td>
+        <td>—</td>
+        <td><a class="find" href="https://cps.edu/lscelection">Find yours</a></td>
+      </tr>
+      <tr>
+        <th scope="row">Illinois General Primary</th>
+        <td>March 21, 2028</td>
+        <td class="countdown">500 days</td>
+        <td>Party nominations for president, Congress, state and county office</td>
+        <td>25.88%<br><small>March 19, 2024 presidential primary</small></td>
+        <td><a class="make-it-so" download href="illinois-general-primary.ics">Make it so</a><span class="print-only">https://chicagoelections.gov/</span></td>
+      </tr>
+      <tr>
+        <th scope="row">General Election</th>
+        <td>November 7, 2028</td>
+        <td class="countdown">731 days</td>
+        <td>President, Congress, state office, and judicial retention</td>
+        <td>67.94%<br><small>November 5, 2024 general</small></td>
+        <td><a class="make-it-so" download href="general-election.ics">Make it so</a><span class="print-only">https://chicagoelections.gov/</span></td>
+      </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="wrap">
+<table>
+  <caption>Rooms — no ballot required</caption>
+  <thead>
+    <tr><th scope="col">What</th><th scope="col">When</th><th scope="col" class="countdown">From today</th>
+        <th scope="col">Governs</th><th scope="col">Last turnout</th><th scope="col"></th></tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th scope="row">Police District Council meeting</th>
+        <td>Monthly; each district sets its own date</td>
+        <td class="countdown">—</td>
+        <td>Public-safety priorities and community input on policing in your police district</td>
+        <td>—</td>
+        <td><a class="find" href="https://ccpsa.chicago.gov/public-meeting-calendar/">Find yours</a></td>
+      </tr>
+      <tr>
+        <th scope="row">Local School Council meeting</th>
+        <td>Open to the public; each council sets its schedule every July</td>
+        <td class="countdown">—</td>
+        <td>Principal selection, the school improvement plan, and the school budget</td>
+        <td>—</td>
+        <td><a class="find" href="https://schoolinfo.cps.edu/Map-LSCMembers/">Find yours</a></td>
+      </tr>
+      <tr>
+        <th scope="row">Your ward office</th>
+        <td>Varies by ward; start with your alderperson</td>
+        <td class="countdown">—</td>
+        <td>Whatever your alderperson&#x27;s office decides to do with your ward</td>
+        <td>—</td>
+        <td><a class="find" href="https://chicago.gov/city/en/depts/mayor/provdrs/your_ward_and_alderman/svcs/find_my_alderman.html">Find yours</a></td>
+      </tr>
+      <tr>
+        <th scope="row">Chi Hack Night</th>
+        <td>Every Tuesday, 7 to 10pm</td>
+        <td class="countdown">—</td>
+        <td>Nothing, formally. It is where a lot of Chicago&#x27;s civic tech gets built.</td>
+        <td>—</td>
+        <td><a class="make-it-so" download href="chi-hack-night.ics">Make it so</a><span class="print-only">https://chihacknight.org/</span></td>
+      </tr>
+  </tbody>
+</table>
+</div>
+
+<footer>
+  <p>Election dates are computed from the Illinois Election Code and checked against the State
+  Board of Elections' published calendar where one exists. Turnout comes from the Chicago Board
+  of Election Commissioners' official proclamations. No tracking, no accounts, no personal data.</p>
+  <h2 style="font-size:1rem">Sources</h2>
+  <ul>
+    <li><a href="https://ilga.gov/legislation/ilcs/documents/001000050K2A-1.1.htm">Illinois Election Code, 10 ILCS 5/2A-1.1 (election dates)</a></li>
+    <li><a href="https://cdn.ymaws.com/www.ilparks.org/resource/resmgr/legislative_material/election_calendar/2027electionandcampaignfinan.pdf">Illinois State Board of Elections, 2027 Election and Campaign Finance Calendar (issued June 29, 2026)</a></li>
+    <li><a href="https://www.chicago.gov/city/en/depts/ccpsa/supp_info/district-councils.html">City of Chicago, Information on District Councils</a></li>
+    <li><a href="https://chicagoelections.gov/news/proclamation-final-results-february-28-2023-municipal-election-city-chicago">Chicago Board of Election Commissioners, Proclamation of Final Results, February 28, 2023 Municipal Election</a></li>
+    <li><a href="https://witnessslips.ilga.gov/legislation/ilcs/documents/001000050K2A-1.1a.htm">Illinois Election Code, 10 ILCS 5/2A-1.1a (Passover postponement)</a></li>
+    <li><a href="https://hebcal.com/h/pesach-2027?i=on">Hebcal, Pesach 2027</a></li>
+    <li><a href="https://chicagoelections.gov/news/proclamation-final-results-april-4-2023-municipal-run-election-city-chicago">Chicago Board of Election Commissioners, Proclamation of Final Results, April 4, 2023 Municipal Run-Off Election</a></li>
+    <li><a href="https://www.cps.edu/press-releases/2026/march/chicago-public-schools-kicks-off--2026-district-wide-local-school-council-elections/">Chicago Public Schools, 2026 Local School Council elections press release</a></li>
+    <li><a href="https://cps.edu/globalassets/cps-pages/about-cps/local-school-councils-lscs/2024-lsc-reference-guide-english.pdf">Chicago Public Schools, 2024 LSC Reference Guide</a></li>
+    <li><a href="https://chicagoelections.gov/news/proclamation-official-results-march-19-2024-presidential-primary-election-city-chicago">Chicago Board of Election Commissioners, Proclamation of Official Results, March 19, 2024 Presidential Primary</a></li>
+    <li><a href="https://cboeprod.blob.core.usgovcloudapi.net/prod/2024-11/Proclamation%20of%20Official%20Results%20-%20November%205,%202024.pdf">Chicago Board of Election Commissioners, Proclamation of Official Results, November 5, 2024</a></li>
+    <li><a href="https://ccpsa.chicago.gov/public-meeting-calendar/">Community Commission for Public Safety and Accountability, Public Meeting Calendar</a></li>
+    <li><a href="https://chicago.gov/city/en/depts/mayor/provdrs/your_ward_and_alderman/svcs/find_my_alderman.html">City of Chicago, Find Your Ward and Alderman</a></li>
+    <li><a href="https://chihacknight.org/">Chi Hack Night</a></li>
+  </ul>
+  <p>Built 2026-11-07 by roster.py, at
+  <a href="https://github.com/lorenanicole/blog-code/tree/main/make-it-so-show-up-build-tools">github.com/lorenanicole/blog-code</a>.</p>
+</footer>
+</body>
+</html>

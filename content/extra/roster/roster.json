@@ -1,0 +1,141 @@
+[
+  {
+    "name": "Chicago Municipal General",
+    "on": "2027-02-23",
+    "when": null,
+    "recurrence": null,
+    "governs": "Mayor, City Clerk, City Treasurer, all 50 alderpersons, and the Police District Councils in all 22 police districts",
+    "find_url": "https://chicagoelections.gov/",
+    "last_turnout": {
+      "election": "February 28, 2023 municipal",
+      "ballots": 566973,
+      "registered": 1581564,
+      "percent": 35.85,
+      "source": "https://chicagoelections.gov/news/proclamation-final-results-february-28-2023-municipal-election-city-chicago"
+    },
+    "sources": [
+      "https://ilga.gov/legislation/ilcs/documents/001000050K2A-1.1.htm",
+      "https://cdn.ymaws.com/www.ilparks.org/resource/resmgr/legislative_material/election_calendar/2027electionandcampaignfinan.pdf",
+      "https://www.chicago.gov/city/en/depts/ccpsa/supp_info/district-councils.html"
+    ]
+  },
+  {
+    "name": "Chicago Municipal Runoff",
+    "on": "2027-04-06",
+    "when": null,
+    "recurrence": null,
+    "governs": "Any city office where no candidate won a majority in February",
+    "find_url": "https://chicagoelections.gov/",
+    "last_turnout": {
+      "election": "April 4, 2023 runoff",
+      "ballots": 613795,
+      "registered": 1587153,
+      "percent": 38.67,
+      "source": "https://chicagoelections.gov/news/proclamation-final-results-april-4-2023-municipal-run-election-city-chicago"
+    },
+    "sources": [
+      "https://ilga.gov/legislation/ilcs/documents/001000050K2A-1.1.htm",
+      "https://witnessslips.ilga.gov/legislation/ilcs/documents/001000050K2A-1.1a.htm",
+      "https://hebcal.com/h/pesach-2027?i=on",
+      "https://cdn.ymaws.com/www.ilparks.org/resource/resmgr/legislative_material/election_calendar/2027electionandcampaignfinan.pdf"
+    ]
+  },
+  {
+    "name": "Local School Council elections",
+    "on": null,
+    "when": "Spring 2028 (CPS sets the date)",
+    "recurrence": null,
+    "governs": "Parent, community and staff seats on the council at every CPS school",
+    "find_url": "https://cps.edu/lscelection",
+    "last_turnout": null,
+    "sources": [
+      "https://www.cps.edu/press-releases/2026/march/chicago-public-schools-kicks-off--2026-district-wide-local-school-council-elections/",
+      "https://cps.edu/globalassets/cps-pages/about-cps/local-school-councils-lscs/2024-lsc-reference-guide-english.pdf"
+    ]
+  },
+  {
+    "name": "Illinois General Primary",
+    "on": "2028-03-21",
+    "when": null,
+    "recurrence": null,
+    "governs": "Party nominations for president, Congress, state and county office",
+    "find_url": "https://chicagoelections.gov/",
+    "last_turnout": {
+      "election": "March 19, 2024 presidential primary",
+      "ballots": 390697,
+      "registered": 1509554,
+      "percent": 25.88,
+      "source": "https://chicagoelections.gov/news/proclamation-official-results-march-19-2024-presidential-primary-election-city-chicago"
+    },
+    "sources": [
+      "https://ilga.gov/legislation/ilcs/documents/001000050K2A-1.1.htm"
+    ]
+  },
+  {
+    "name": "General Election",
+    "on": "2028-11-07",
+    "when": null,
+    "recurrence": null,
+    "governs": "President, Congress, state office, and judicial retention",
+    "find_url": "https://chicagoelections.gov/",
+    "last_turnout": {
+      "election": "November 5, 2024 general",
+      "ballots": 1018359,
+      "registered": 1498873,
+      "percent": 67.94,
+      "source": "https://cboeprod.blob.core.usgovcloudapi.net/prod/2024-11/Proclamation%20of%20Official%20Results%20-%20November%205,%202024.pdf"
+    },
+    "sources": [
+      "https://ilga.gov/legislation/ilcs/documents/001000050K2A-1.1.htm"
+    ]
+  },
+  {
+    "name": "Police District Council meeting",
+    "on": null,
+    "when": "Monthly; each district sets its own date",
+    "recurrence": null,
+    "governs": "Public-safety priorities and community input on policing in your police district",
+    "find_url": "https://ccpsa.chicago.gov/public-meeting-calendar/",
+    "last_turnout": null,
+    "sources": [
+      "https://www.chicago.gov/city/en/depts/ccpsa/supp_info/district-councils.html",
+      "https://ccpsa.chicago.gov/public-meeting-calendar/"
+    ]
+  },
+  {
+    "name": "Local School Council meeting",
+    "on": null,
+    "when": "Open to the public; each council sets its schedule every July",
+    "recurrence": null,
+    "governs": "Principal selection, the school improvement plan, and the school budget",
+    "find_url": "https://schoolinfo.cps.edu/Map-LSCMembers/",
+    "last_turnout": null,
+    "sources": [
+      "https://cps.edu/globalassets/cps-pages/about-cps/local-school-councils-lscs/2024-lsc-reference-guide-english.pdf"
+    ]
+  },
+  {
+    "name": "Your ward office",
+    "on": null,
+    "when": "Varies by ward; start with your alderperson",
+    "recurrence": null,
+    "governs": "Whatever your alderperson's office decides to do with your ward",
+    "find_url": "https://chicago.gov/city/en/depts/mayor/provdrs/your_ward_and_alderman/svcs/find_my_alderman.html",
+    "last_turnout": null,
+    "sources": [
+      "https://chicago.gov/city/en/depts/mayor/provdrs/your_ward_and_alderman/svcs/find_my_alderman.html"
+    ]
+  },
+  {
+    "name": "Chi Hack Night",
+    "on": null,
+    "when": "Every Tuesday, 7 to 10pm",
+    "recurrence": "FREQ=WEEKLY;BYDAY=TU",
+    "governs": "Nothing, formally. It is where a lot of Chicago's civic tech gets built.",
+    "find_url": "https://chihacknight.org/",
+    "last_turnout": null,
+    "sources": [
+      "https://chihacknight.org/"
+    ]
+  }
+]

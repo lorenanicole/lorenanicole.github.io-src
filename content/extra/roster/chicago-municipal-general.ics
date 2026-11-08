@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//lorenamesa.com//duty-roster//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:chicago-municipal-general@lorenamesa.com
+DTSTAMP:20261107T000000Z
+DTSTART;VALUE=DATE:20270223
+DTEND;VALUE=DATE:20270224
+SUMMARY:Chicago Municipal General
+DESCRIPTION:Mayor\, City Clerk\, City Treasurer\, all 50 alderpersons\, and
+  the Police District Councils in all 22 police districts. Details: https:/
+ /chicagoelections.gov/
+URL:https://chicagoelections.gov/
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

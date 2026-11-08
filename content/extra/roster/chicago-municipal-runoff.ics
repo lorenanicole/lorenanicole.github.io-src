@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//lorenamesa.com//duty-roster//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:chicago-municipal-runoff@lorenamesa.com
+DTSTAMP:20261107T000000Z
+DTSTART;VALUE=DATE:20270406
+DTEND;VALUE=DATE:20270407
+SUMMARY:Chicago Municipal Runoff
+DESCRIPTION:Any city office where no candidate won a majority in February. 
+ Details: https://chicagoelections.gov/
+URL:https://chicagoelections.gov/
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300"
+     role="img" width="100%" style="max-width:760px;height:auto"
+     aria-label="The word ENGAGE in wide squared science-fiction lettering, arched and filled
+     with a rainbow gradient in the style of 1990s WordArt, on a black panel with starbursts.">
+<defs>
+  <linearGradient id="rainbow" x1="90" y1="0" x2="670" y2="0" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#ff2d2d"/><stop offset=".18" stop-color="#ff8a00"/>
+    <stop offset=".36" stop-color="#ffe600"/><stop offset=".54" stop-color="#31d843"/>
+    <stop offset=".72" stop-color="#1f8bff"/><stop offset=".88" stop-color="#7b3dff"/>
+    <stop offset="1" stop-color="#ff3dc4"/>
+  </linearGradient>
+  <linearGradient id="panelbg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#1b1b24"/><stop offset="1" stop-color="#05050a"/>
+  </linearGradient>
+</defs>
+<style>
+  .fill path { stroke: #000; stroke-width: 7; paint-order: stroke;
+                stroke-linejoin: round; }
+  .shadow path { fill: #000; opacity: .8; }
+  .spark { fill: #fff; }
+</style>
+
+<rect x="0" y="0" width="760" height="300" rx="18" fill="url(#panelbg)"/>
+<rect x="10" y="10" width="740" height="280" rx="12"
+      fill="none" stroke="url(#rainbow)" stroke-width="3"/>
+
+<g transform="translate(7,7)">
+<g class="shadow">
+  <path d="M0,0 H96 V21 H22 V50 H76 V70 H22 V99 H96 V120 H0 Z" transform="translate(160.52,209.59) rotate(-21.46) scale(0.78) translate(-48.0,-120.0)" fill-rule="evenodd"/>
+  <path d="M0,0 H24 L72,74 V0 H96 V120 H72 L24,46 V120 H0 Z" transform="translate(246.31,183.08) rotate(-12.87) scale(0.78) translate(-48.0,-120.0)" fill-rule="evenodd"/>
+  <path d="M96,0 H0 V120 H96 V54 H52 V75 H74 V99 H22 V21 H96 Z" transform="translate(335.10,169.68) rotate(-4.29) scale(0.78) translate(-48.0,-120.0)" fill-rule="evenodd"/>
+  <path d="M28,0 H68 L96,120 H72 L66,95 H30 L24,120 H0 Z M38,70 H58 L48,26 Z" transform="translate(424.90,169.68) rotate(4.29) scale(0.78) translate(-48.0,-120.0)" fill-rule="evenodd"/>
+  <path d="M96,0 H0 V120 H96 V54 H52 V75 H74 V99 H22 V21 H96 Z" transform="translate(513.69,183.08) rotate(12.87) scale(0.78) translate(-48.0,-120.0)" fill-rule="evenodd"/>
+  <path d="M0,0 H96 V21 H22 V50 H76 V70 H22 V99 H96 V120 H0 Z" transform="translate(599.48,209.59) rotate(21.46) scale(0.78) translate(-48.0,-120.0)" fill-rule="evenodd"/>
+</g>
+</g>
+<g class="fill">
+  <path d="M0,0 H96 V21 H22 V50 H76 V70 H22 V99 H96 V120 H0 Z" transform="translate(160.52,209.59) rotate(-21.46) scale(0.78) translate(-48.0,-120.0)" fill-rule="evenodd" fill="#ff2d2d"/>
+  <path d="M0,0 H24 L72,74 V0 H96 V120 H72 L24,46 V120 H0 Z" transform="translate(246.31,183.08) rotate(-12.87) scale(0.78) translate(-48.0,-120.0)" fill-rule="evenodd" fill="#ff9400"/>
+  <path d="M96,0 H0 V120 H96 V54 H52 V75 H74 V99 H22 V21 H96 Z" transform="translate(335.10,169.68) rotate(-4.29) scale(0.78) translate(-48.0,-120.0)" fill-rule="evenodd" fill="#d1e30f"/>
+  <path d="M28,0 H68 L96,120 H72 L66,95 H30 L24,120 H0 Z M38,70 H58 L48,26 Z" transform="translate(424.90,169.68) rotate(4.29) scale(0.78) translate(-48.0,-120.0)" fill-rule="evenodd" fill="#2bbe82"/>
+  <path d="M96,0 H0 V120 H96 V54 H52 V75 H74 V99 H22 V21 H96 Z" transform="translate(513.69,183.08) rotate(12.87) scale(0.78) translate(-48.0,-120.0)" fill-rule="evenodd" fill="#4d64ff"/>
+  <path d="M0,0 H96 V21 H22 V50 H76 V70 H22 V99 H96 V120 H0 Z" transform="translate(599.48,209.59) rotate(21.46) scale(0.78) translate(-48.0,-120.0)" fill-rule="evenodd" fill="#ff3dc4"/>
+</g>
+
+<rect x="200" y="244" width="360" height="7" rx="3.5" fill="url(#rainbow)"/>
+  <path class="spark" d="M74.0,70.0 Q77.7,88.3 96.0,92.0 Q77.7,95.7 74.0,114.0 Q70.3,95.7 52.0,92.0 Q70.3,88.3 74.0,70.0 Z"/>
+  <path class="spark" d="M686.0,61.0 Q689.2,76.8 705.0,80.0 Q689.2,83.2 686.0,99.0 Q682.8,83.2 667.0,80.0 Q682.8,76.8 686.0,61.0 Z"/>
+  <path class="spark" d="M108.0,218.0 Q110.4,229.6 122.0,232.0 Q110.4,234.4 108.0,246.0 Q105.6,234.4 94.0,232.0 Q105.6,229.6 108.0,218.0 Z"/>
+  <path class="spark" d="M652.0,210.0 Q654.7,223.3 668.0,226.0 Q654.7,228.7 652.0,242.0 Q649.3,228.7 636.0,226.0 Q649.3,223.3 652.0,210.0 Z"/>
+</svg>

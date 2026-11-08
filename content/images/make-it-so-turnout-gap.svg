@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430"
+     role="img" width="100%" style="max-width:880px;height:auto"
+     aria-label="Line chart of Chicago voter turnout from 1983 to 2024. Turnout in
+     presidential general elections stays between 63 and 78 percent across the whole
+     period, ending at 67.94 percent in November 2024. Turnout in Chicago municipal
+     elections starts at 82.07 percent in April 1983, falls below 46 percent by 1991,
+     and has sat between 33 and 42 percent ever since, ending at 35.85 percent in
+     February 2023.">
+<style>
+  .viz { --ink: #16161d; --quiet: #5a5a52; --rule: #d7d7d0; --surface: #fcfcfb;
+          --pres: #2a78d6; --muni: #eb6834; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --ink: #e8e8e3; --quiet: #a0a098; --rule: #3a3a42; --surface: #1a1a19;
+            --pres: #3987e5; --muni: #d95926; }
+  }
+  .surface { fill: var(--surface); }
+  .grid { stroke: var(--rule); stroke-width: 1; }
+  .tick { fill: var(--quiet); font: 12px ui-sans-serif, system-ui, sans-serif; }
+  .pres-line { fill: none; stroke: var(--pres); stroke-width: 2; }
+  .muni-line { fill: none; stroke: var(--muni); stroke-width: 2;
+                stroke-dasharray: 7 4; }
+  .pres-dot { fill: var(--pres); }
+  .muni-dot { fill: var(--muni); }
+  .label-pres { fill: var(--ink); font: 700 13px ui-sans-serif, system-ui, sans-serif; }
+  .label-muni { fill: var(--ink); font: 700 13px ui-sans-serif, system-ui, sans-serif; }
+</style>
+<g class="viz">
+  <rect class="surface" x="0" y="0" width="880" height="430" rx="6"/>
+  <line class="grid" x1="54" y1="378.0" x2="748" y2="378.0"/>
+  <text class="tick" x="44" y="382.0" text-anchor="end">0%</text>
+  <line class="grid" x1="54" y1="300.2" x2="748" y2="300.2"/>
+  <text class="tick" x="44" y="304.2" text-anchor="end">20%</text>
+  <line class="grid" x1="54" y1="222.4" x2="748" y2="222.4"/>
+  <text class="tick" x="44" y="226.4" text-anchor="end">40%</text>
+  <line class="grid" x1="54" y1="144.7" x2="748" y2="144.7"/>
+  <text class="tick" x="44" y="148.7" text-anchor="end">60%</text>
+  <line class="grid" x1="54" y1="66.9" x2="748" y2="66.9"/>
+  <text class="tick" x="44" y="70.9" text-anchor="end">80%</text>
+  <text class="tick" x="54.0" y="400" text-anchor="middle">1983</text>
+  <text class="tick" x="189.4" y="400" text-anchor="middle">1991</text>
+  <text class="tick" x="324.8" y="400" text-anchor="middle">1999</text>
+  <text class="tick" x="460.2" y="400" text-anchor="middle">2007</text>
+  <text class="tick" x="595.7" y="400" text-anchor="middle">2015</text>
+  <text class="tick" x="731.1" y="400" text-anchor="middle">2023</text>
+  <path class="pres-line" d="M70.9,73.8 L138.6,99.6 L206.3,88.0 L274.0,132.3 L341.8,104.9 L409.5,85.8 L477.2,90.7 L544.9,84.7 L612.6,101.7 L680.3,93.0 L748.0,113.8"/>
+    <circle class="pres-dot" cx="70.9" cy="73.8" r="4"><title>Presidential general, November 1984: 78.23%</title></circle>
+    <circle class="pres-dot" cx="138.6" cy="99.6" r="4"><title>Presidential general, November 1988: 71.58%</title></circle>
+    <circle class="pres-dot" cx="206.3" cy="88.0" r="4"><title>Presidential general, November 1992: 74.57%</title></circle>
+    <circle class="pres-dot" cx="274.0" cy="132.3" r="4"><title>Presidential general, November 1996: 63.17%</title></circle>
+    <circle class="pres-dot" cx="341.8" cy="104.9" r="4"><title>Presidential general, November 2000: 70.22%</title></circle>
+    <circle class="pres-dot" cx="409.5" cy="85.8" r="4"><title>Presidential general, November 2004: 75.13%</title></circle>
+    <circle class="pres-dot" cx="477.2" cy="90.7" r="4"><title>Presidential general, November 2008: 73.87%</title></circle>
+    <circle class="pres-dot" cx="544.9" cy="84.7" r="4"><title>Presidential general, November 2012: 75.41%</title></circle>
+    <circle class="pres-dot" cx="612.6" cy="101.7" r="4"><title>Presidential general, November 2016: 71.04%</title></circle>
+    <circle class="pres-dot" cx="680.3" cy="93.0" r="4"><title>Presidential general, November 2020: 73.28%</title></circle>
+    <circle class="pres-dot" cx="748.0" cy="113.8" r="4"><title>Presidential general, November 2024: 67.94%</title></circle>
+  <path class="muni-line" d="M54.0,58.8 L121.7,89.9 L189.4,202.8 L257.1,213.7 L324.8,215.0 L392.5,246.9 L460.2,249.4 L528.0,213.5 L595.7,245.7 L663.4,240.1 L731.1,238.6"/>
+    <circle class="muni-dot" cx="54.0" cy="58.8" r="4"><title>Chicago municipal, April 1983: 82.07%</title></circle>
+    <circle class="muni-dot" cx="121.7" cy="89.9" r="4"><title>Chicago municipal, April 1987: 74.08%</title></circle>
+    <circle class="muni-dot" cx="189.4" cy="202.8" r="4"><title>Chicago municipal, April 1991: 45.06%</title></circle>
+    <circle class="muni-dot" cx="257.1" cy="213.7" r="4"><title>Chicago municipal, April 1995: 42.25%</title></circle>
+    <circle class="muni-dot" cx="324.8" cy="215.0" r="4"><title>Chicago municipal, February 1999: 41.92%</title></circle>
+    <circle class="muni-dot" cx="392.5" cy="246.9" r="4"><title>Chicago municipal, February 2003: 33.71%</title></circle>
+    <circle class="muni-dot" cx="460.2" cy="249.4" r="4"><title>Chicago municipal, February 2007: 33.08%</title></circle>
+    <circle class="muni-dot" cx="528.0" cy="213.5" r="4"><title>Chicago municipal, February 2011: 42.30%</title></circle>
+    <circle class="muni-dot" cx="595.7" cy="245.7" r="4"><title>Chicago municipal, February 2015: 34.03%</title></circle>
+    <circle class="muni-dot" cx="663.4" cy="240.1" r="4"><title>Chicago municipal, February 2019: 35.45%</title></circle>
+    <circle class="muni-dot" cx="731.1" cy="238.6" r="4"><title>Chicago municipal, February 2023: 35.85%</title></circle>
+  <text class="label-pres" x="760.0" y="111.8">Presidential</text>
+  <text class="tick" x="760.0" y="127.8">67.94% in 2024</text>
+  <text class="label-muni" x="743.1" y="240.6">Municipal</text>
+  <text class="tick" x="743.1" y="256.6">35.85% in 2023</text>
+  <text class="tick" x="54.0" y="46.8">82.07% — April 1983</text>
+</g>
+</svg>

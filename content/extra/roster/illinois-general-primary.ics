@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//lorenamesa.com//duty-roster//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:illinois-general-primary@lorenamesa.com
+DTSTAMP:20261107T000000Z
+DTSTART;VALUE=DATE:20280321
+DTEND;VALUE=DATE:20280322
+SUMMARY:Illinois General Primary
+DESCRIPTION:Party nominations for president\, Congress\, state and county o
+ ffice. Details: https://chicagoelections.gov/
+URL:https://chicagoelections.gov/
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
